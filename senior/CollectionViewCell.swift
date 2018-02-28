@@ -21,6 +21,7 @@ class CollectionViewCell: UICollectionViewCell {
     func updateData(){
         myLabel.text = mydestination.title
         imageView.image = mydestination.img
+        imageView.layer.cornerRadius = 7
         
     }
     
@@ -29,6 +30,7 @@ class CollectionViewCell: UICollectionViewCell {
         self.layer.borderWidth = 0.5
         self.layer.cornerRadius = 5.0
         self.clipsToBounds = true
-        self.layer.borderColor = UIColor.lightGray.cgColor
+        //self.backgroundColor = UIColor.yellow
+        self.layer.borderColor = UIColor.white.cgColor
     }
 }

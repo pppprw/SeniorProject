@@ -8,15 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		180CFAEB20419B8600DCFC75 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180CFAEA20419B8600DCFC75 /* CreateAccountViewController.swift */; };
+		180CFAED20428EE600DCFC75 /* Assets 13-27-34-945.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180CFAEC20428EE500DCFC75 /* Assets 13-27-34-945.xcassets */; };
+		180CFAEF2042985800DCFC75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180CFAEE2042985800DCFC75 /* LaunchScreen.storyboard */; };
+		180CFAF12042EFFC00DCFC75 /* ImageUploadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180CFAF02042EFFC00DCFC75 /* ImageUploadingViewController.swift */; };
 		18358AC9203A821C005796B7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358AC8203A821C005796B7 /* SecondViewController.swift */; };
 		18358ACB203AB2C8005796B7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358ACA203AB2C8005796B7 /* CollectionViewCell.swift */; };
 		18358ACD203ACF89005796B7 /* destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358ACC203ACF89005796B7 /* destination.swift */; };
-		184A2CE22040442000B65AD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184A2CE12040441E00B65AD7 /* Assets.xcassets */; };
+		1878AB8D204587C3008D5AF5 /* MHPinterestLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1878AB8E204587C3008D5AF5 /* MHPinterestLayout.framework */; };
+		1878AB902045A3D2008D5AF5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878AB8F2045A3D2008D5AF5 /* Extension.swift */; };
 		18D246DA2033093E0098C050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D246D92033093E0098C050 /* AppDelegate.swift */; };
 		18D246DC2033093E0098C050 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D246DB2033093E0098C050 /* ViewController.swift */; };
 		18D246DF2033093E0098C050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D246DD2033093E0098C050 /* Main.storyboard */; };
 		18D246E22033093E0098C050 /* senior.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18D246E02033093E0098C050 /* senior.xcdatamodeld */; };
-		18D246E72033093E0098C050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D246E52033093E0098C050 /* LaunchScreen.storyboard */; };
 		18D246F22033093E0098C050 /* seniorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D246F12033093E0098C050 /* seniorTests.swift */; };
 		18D246FD2033093F0098C050 /* seniorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D246FC2033093F0098C050 /* seniorUITests.swift */; };
 		20937EDD0ABCC20941B03078 /* Pods_senior.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A4CF2BC77B29FDE90718ED /* Pods_senior.framework */; };
@@ -42,16 +45,19 @@
 /* Begin PBXFileReference section */
 		14738A916401D65B609C4557 /* Pods-senior.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-senior.release.xcconfig"; path = "Pods/Target Support Files/Pods-senior/Pods-senior.release.xcconfig"; sourceTree = "<group>"; };
 		180CFAEA20419B8600DCFC75 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		180CFAEC20428EE500DCFC75 /* Assets 13-27-34-945.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 13-27-34-945.xcassets"; sourceTree = "<group>"; };
+		180CFAEE2042985800DCFC75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		180CFAF02042EFFC00DCFC75 /* ImageUploadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadingViewController.swift; sourceTree = "<group>"; };
 		18358AC8203A821C005796B7 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		18358ACA203AB2C8005796B7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		18358ACC203ACF89005796B7 /* destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = destination.swift; sourceTree = "<group>"; };
-		184A2CE12040441E00B65AD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1878AB8E204587C3008D5AF5 /* MHPinterestLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MHPinterestLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1878AB8F2045A3D2008D5AF5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		18D246D62033093E0098C050 /* senior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = senior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D246D92033093E0098C050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18D246DB2033093E0098C050 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18D246DE2033093E0098C050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18D246E12033093E0098C050 /* senior.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = senior.xcdatamodel; sourceTree = "<group>"; };
-		18D246E62033093E0098C050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18D246E82033093E0098C050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D246ED2033093E0098C050 /* seniorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = seniorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D246F12033093E0098C050 /* seniorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seniorTests.swift; sourceTree = "<group>"; };
@@ -68,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1878AB8D204587C3008D5AF5 /* MHPinterestLayout.framework in Frameworks */,
 				20937EDD0ABCC20941B03078 /* Pods_senior.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +99,7 @@
 		05629D22434F719DD81B3FEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1878AB8E204587C3008D5AF5 /* MHPinterestLayout.framework */,
 				26A4CF2BC77B29FDE90718ED /* Pods_senior.framework */,
 			);
 			name = Frameworks;
@@ -101,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				18D246E82033093E0098C050 /* Info.plist */,
-				184A2CE12040441E00B65AD7 /* Assets.xcassets */,
+				180CFAEC20428EE500DCFC75 /* Assets 13-27-34-945.xcassets */,
 				18D246E02033093E0098C050 /* senior.xcdatamodeld */,
 			);
 			name = Model;
@@ -110,10 +118,21 @@
 		18C843002035CC8C00F61A71 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				18D246E52033093E0098C050 /* LaunchScreen.storyboard */,
 				18D246DD2033093E0098C050 /* Main.storyboard */,
+				180CFAEE2042985800DCFC75 /* LaunchScreen.storyboard */,
 			);
 			name = storyboard;
+			sourceTree = "<group>";
+		};
+		18CB4052204302CD00EA5F74 /* Wander's Main page */ = {
+			isa = PBXGroup;
+			children = (
+				18358ACC203ACF89005796B7 /* destination.swift */,
+				18358AC8203A821C005796B7 /* SecondViewController.swift */,
+				18358ACA203AB2C8005796B7 /* CollectionViewCell.swift */,
+				1878AB8F2045A3D2008D5AF5 /* Extension.swift */,
+			);
+			name = "Wander's Main page";
 			sourceTree = "<group>";
 		};
 		18D246CD2033093E0098C050 = {
@@ -143,9 +162,8 @@
 			children = (
 				18D246D92033093E0098C050 /* AppDelegate.swift */,
 				18D246DB2033093E0098C050 /* ViewController.swift */,
-				18358ACC203ACF89005796B7 /* destination.swift */,
-				18358AC8203A821C005796B7 /* SecondViewController.swift */,
-				18358ACA203AB2C8005796B7 /* CollectionViewCell.swift */,
+				18CB4052204302CD00EA5F74 /* Wander's Main page */,
+				180CFAF02042EFFC00DCFC75 /* ImageUploadingViewController.swift */,
 				180CFAEA20419B8600DCFC75 /* CreateAccountViewController.swift */,
 				18C843002035CC8C00F61A71 /* storyboard */,
 				18C842FF2035CC5600F61A71 /* Model */,
@@ -251,15 +269,18 @@
 				TargetAttributes = {
 					18D246D52033093E0098C050 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					18D246EC2033093E0098C050 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 18D246D52033093E0098C050;
 					};
 					18D246F72033093F0098C050 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 18D246D52033093E0098C050;
 					};
@@ -290,9 +311,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D246E72033093E0098C050 /* LaunchScreen.storyboard in Resources */,
-				184A2CE22040442000B65AD7 /* Assets.xcassets in Resources */,
+				180CFAEF2042985800DCFC75 /* LaunchScreen.storyboard in Resources */,
 				18D246DF2033093E0098C050 /* Main.storyboard in Resources */,
+				180CFAED20428EE600DCFC75 /* Assets 13-27-34-945.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,12 +341,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-senior/Pods-senior-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MHPinterestLayout/MHPinterestLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftCommonUtils/SwiftCommonUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MHPinterestLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCommonUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,8 +396,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1878AB902045A3D2008D5AF5 /* Extension.swift in Sources */,
 				180CFAEB20419B8600DCFC75 /* CreateAccountViewController.swift in Sources */,
 				18358AC9203A821C005796B7 /* SecondViewController.swift in Sources */,
+				180CFAF12042EFFC00DCFC75 /* ImageUploadingViewController.swift in Sources */,
 				18D246DC2033093E0098C050 /* ViewController.swift in Sources */,
 				18358ACB203AB2C8005796B7 /* CollectionViewCell.swift in Sources */,
 				18358ACD203ACF89005796B7 /* destination.swift in Sources */,
@@ -421,14 +446,6 @@
 				18D246DE2033093E0098C050 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		18D246E52033093E0098C050 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18D246E62033093E0098C050 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -546,7 +563,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.senior;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -559,7 +577,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.senior;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -572,7 +591,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.seniorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/senior.app/senior";
 			};
 			name = Debug;
@@ -586,7 +606,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.seniorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/senior.app/senior";
 			};
 			name = Release;
@@ -599,7 +620,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.seniorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = senior;
 			};
 			name = Debug;
@@ -612,7 +634,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.seniorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = senior;
 			};
 			name = Release;

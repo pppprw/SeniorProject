@@ -7,21 +7,29 @@
 //
 
 import UIKit
+import MHPinterestLayout
+import SwiftCommonUtils
 
-class SecondViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+typealias Dimension = (captionHeight:CGFloat, attachmentHeight:CGFloat)
+
+class SecondViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MHPinterestLayoutDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+     var layout = MHPinterestLayout()
     
     var destinations = destination.createList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Do any additional setup after loading the view.
+       
+        layout.delegate = self
+        layout.headerHeight = 10
+        layout.footerHeight = 10
+        self.collectionView.collectionViewLayout = layout
     }
     
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,11 +39,29 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return destinations.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         cell.mydestination = destinations[indexPath.row]
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, heightForItemAtIndexPath indexPath: IndexPath) -> CGFloat {
+        
+        let caption = destinations[indexPath.row].title
+        let itemWidth:CGFloat = layout.cellContentWidth
+        
+        let captionHeight = caption?
+            .computedHeight(atWidth: itemWidth, font: UIFont.systemFont(ofSize: 17))
+        
+        let imageHeight = destinations[indexPath.row].img
+            .computedHeight(atWidth: itemWidth) ?? 0
+        
+        let yPaddings:CGFloat = 10
+
+        
+        return captionHeight! + imageHeight + yPaddings
+    }
+    
+    
 }
