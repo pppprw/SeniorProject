@@ -12,21 +12,23 @@ import UIKit
 class destination{
     var title:String!
     var img:UIImage!
+    var name:String!
     
-    init(title:String, img:UIImage){
+    init(title:String, img:UIImage, name:String){
         self.title = title
         self.img = img
+        self.name = name
     }
     
     static func createList()->[destination]{
         return [
-            destination(title: "Henderson Waves", img:UIImage (named:"6-Henderson Waves")!),
-            destination(title: "canadaaa", img:UIImage (named:"canada")!),
-            destination(title: "National Gallery", img:UIImage (named:"15 National gal")!),
-            destination(title: "AJ Hackett", img:UIImage (named:"13:1 AJ Hackett at Sentosa")!),
-            destination(title: "koreaaa", img:UIImage (named:"korea")!),
-            destination(title: "taiwan", img:UIImage (named:"taiwan")!),
-            destination(title: "singapore", img:UIImage (named:"singapore")!),
+            destination(title: "Henderson Waves", img:UIImage (named:"6-Henderson Waves")!, name:"bf"),
+            destination(title: "Canadaaa", img:UIImage (named:"canada")!, name:"prw"),
+            destination(title: "National Gallery", img:UIImage (named:"15 National gal")!, name:"bf"),
+            destination(title: "AJ Hackett", img:UIImage (named:"13:1 AJ Hackett at Sentosa")!, name:"bf"),
+            destination(title: "Koreaaa", img:UIImage (named:"korea")!, name:"prw"),
+            destination(title: "Taiwan", img:UIImage (named:"taiwan")!, name:"prw"),
+            destination(title: "Singapore", img:UIImage (named:"singapore")!, name:"prw"),
         ]
     }
 }

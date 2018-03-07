@@ -11,6 +11,7 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
     
     var mydestination: destination!{
         didSet{
@@ -20,6 +21,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     func updateData(){
         myLabel.text = mydestination.title
+        usernameLabel.text = mydestination.name
         imageView.image = mydestination.img
         imageView.layer.cornerRadius = 7
         
