@@ -16,7 +16,7 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-     var layout = MHPinterestLayout()
+    var layout = MHPinterestLayout()
     
     var destinations = destination.createList()
 
