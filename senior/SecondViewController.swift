@@ -12,13 +12,13 @@ import SwiftCommonUtils
 
 typealias Dimension = (captionHeight:CGFloat, attachmentHeight:CGFloat)
 
+
 class SecondViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MHPinterestLayoutDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    var destinations = destination.createList()
     var layout = MHPinterestLayout()
     
-    var destinations = destination.createList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +43,17 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         cell.mydestination = destinations[indexPath.row]
         
+        
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let desVC = mainStoryboard.instantiateViewController(withIdentifier: "destViewController") as! destViewController
+        desVC.image = destinations[indexPath.row].img
+        self.navigationController?.pushViewController(desVC, animated: true)
+    }
+
     
     func collectionView(_ collectionView: UICollectionView, heightForItemAtIndexPath indexPath: IndexPath) -> CGFloat {
         
@@ -57,13 +66,15 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         let postedbyHeight = postedby?.computedHeight(atWidth: itemWidth, font: UIFont.systemFont(ofSize: 12))
         
         let imageHeight = destinations[indexPath.row].img
-            .computedHeight(atWidth: itemWidth) ?? 0
+            .computedHeight(atWidth: itemWidth)
         
         let yPaddings:CGFloat = 10
 
         
         return captionHeight! + postedbyHeight! + imageHeight + yPaddings
     }
+    
+    
     
     
 }

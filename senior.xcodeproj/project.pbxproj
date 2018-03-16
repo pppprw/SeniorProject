@@ -11,9 +11,11 @@
 		180CFAED20428EE600DCFC75 /* Assets 13-27-34-945.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180CFAEC20428EE500DCFC75 /* Assets 13-27-34-945.xcassets */; };
 		180CFAEF2042985800DCFC75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180CFAEE2042985800DCFC75 /* LaunchScreen.storyboard */; };
 		180CFAF12042EFFC00DCFC75 /* ImageUploadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180CFAF02042EFFC00DCFC75 /* ImageUploadingViewController.swift */; };
+		1821A666205BC8A40021C69F /* destViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1821A665205BC8A40021C69F /* destViewController.swift */; };
 		18358AC9203A821C005796B7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358AC8203A821C005796B7 /* SecondViewController.swift */; };
 		18358ACB203AB2C8005796B7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358ACA203AB2C8005796B7 /* CollectionViewCell.swift */; };
 		18358ACD203ACF89005796B7 /* destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358ACC203ACF89005796B7 /* destination.swift */; };
+		18543899205A4DFD007F7497 /* secondPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18543898205A4DFD007F7497 /* secondPlanViewController.swift */; };
 		18690D31204712F500612388 /* PinAndPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18690D30204712F500612388 /* PinAndPlanViewController.swift */; };
 		1878AB8D204587C3008D5AF5 /* MHPinterestLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1878AB8E204587C3008D5AF5 /* MHPinterestLayout.framework */; };
 		1878AB902045A3D2008D5AF5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878AB8F2045A3D2008D5AF5 /* Extension.swift */; };
@@ -26,6 +28,8 @@
 		18E77E20204EA10A005CC976 /* PinCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E77E1F204EA10A005CC976 /* PinCollectionViewCell.swift */; };
 		18E77E22204EA214005CC976 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E77E21204EA214005CC976 /* PinViewController.swift */; };
 		18E77E24204FDD1E005CC976 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E77E23204FDD1E005CC976 /* Pin.swift */; };
+		18E8841F2055008F00EA0550 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8841E2055008F00EA0550 /* PlanViewController.swift */; };
+		18E88421205508D400EA0550 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E88420205508D400EA0550 /* CustomTableViewCell.swift */; };
 		20937EDD0ABCC20941B03078 /* Pods_senior.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A4CF2BC77B29FDE90718ED /* Pods_senior.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,9 +56,11 @@
 		180CFAEC20428EE500DCFC75 /* Assets 13-27-34-945.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 13-27-34-945.xcassets"; sourceTree = "<group>"; };
 		180CFAEE2042985800DCFC75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180CFAF02042EFFC00DCFC75 /* ImageUploadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadingViewController.swift; sourceTree = "<group>"; };
+		1821A665205BC8A40021C69F /* destViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destViewController.swift; sourceTree = "<group>"; };
 		18358AC8203A821C005796B7 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		18358ACA203AB2C8005796B7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		18358ACC203ACF89005796B7 /* destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = destination.swift; sourceTree = "<group>"; };
+		18543898205A4DFD007F7497 /* secondPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondPlanViewController.swift; sourceTree = "<group>"; };
 		18690D30204712F500612388 /* PinAndPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAndPlanViewController.swift; sourceTree = "<group>"; };
 		1878AB8E204587C3008D5AF5 /* MHPinterestLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MHPinterestLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1878AB8F2045A3D2008D5AF5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -73,6 +79,8 @@
 		18E77E1F204EA10A005CC976 /* PinCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCollectionViewCell.swift; sourceTree = "<group>"; };
 		18E77E21204EA214005CC976 /* PinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
 		18E77E23204FDD1E005CC976 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		18E8841E2055008F00EA0550 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		18E88420205508D400EA0550 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		26A4CF2BC77B29FDE90718ED /* Pods_senior.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_senior.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F18706232316184BD6901EF /* Pods-senior.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-senior.debug.xcconfig"; path = "Pods/Target Support Files/Pods-senior/Pods-senior.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +119,16 @@
 				26A4CF2BC77B29FDE90718ED /* Pods_senior.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1821A660205AA0F30021C69F /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				18E8841E2055008F00EA0550 /* PlanViewController.swift */,
+				18E88420205508D400EA0550 /* CustomTableViewCell.swift */,
+				18543898205A4DFD007F7497 /* secondPlanViewController.swift */,
+			);
+			name = Plan;
 			sourceTree = "<group>";
 		};
 		187F3AA32046DFE500DA58B1 /* Sign in and Create Account */ = {
@@ -155,6 +173,7 @@
 				18358ACC203ACF89005796B7 /* destination.swift */,
 				18358AC8203A821C005796B7 /* SecondViewController.swift */,
 				18358ACA203AB2C8005796B7 /* CollectionViewCell.swift */,
+				1821A665205BC8A40021C69F /* destViewController.swift */,
 				1878AB8F2045A3D2008D5AF5 /* Extension.swift */,
 			);
 			name = "Wander's Main page";
@@ -218,11 +237,20 @@
 			isa = PBXGroup;
 			children = (
 				18690D30204712F500612388 /* PinAndPlanViewController.swift */,
+				1821A660205AA0F30021C69F /* Plan */,
+				18E8841D2055007400EA0550 /* Pin */,
+			);
+			name = "Pin&Plan";
+			sourceTree = "<group>";
+		};
+		18E8841D2055007400EA0550 /* Pin */ = {
+			isa = PBXGroup;
+			children = (
 				18E77E23204FDD1E005CC976 /* Pin.swift */,
 				18E77E21204EA214005CC976 /* PinViewController.swift */,
 				18E77E1F204EA10A005CC976 /* PinCollectionViewCell.swift */,
 			);
-			name = "Pin&Plan";
+			name = Pin;
 			sourceTree = "<group>";
 		};
 		4CE6DC2C45474768268234D1 /* Pods */ = {
@@ -438,11 +466,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1821A666205BC8A40021C69F /* destViewController.swift in Sources */,
 				1878AB902045A3D2008D5AF5 /* Extension.swift in Sources */,
 				180CFAEB20419B8600DCFC75 /* CreateAccountViewController.swift in Sources */,
 				18358AC9203A821C005796B7 /* SecondViewController.swift in Sources */,
+				18E8841F2055008F00EA0550 /* PlanViewController.swift in Sources */,
 				180CFAF12042EFFC00DCFC75 /* ImageUploadingViewController.swift in Sources */,
 				18D246DC2033093E0098C050 /* ViewController.swift in Sources */,
+				18E88421205508D400EA0550 /* CustomTableViewCell.swift in Sources */,
 				18E77E20204EA10A005CC976 /* PinCollectionViewCell.swift in Sources */,
 				18E77E24204FDD1E005CC976 /* Pin.swift in Sources */,
 				18358ACB203AB2C8005796B7 /* CollectionViewCell.swift in Sources */,
@@ -451,6 +482,7 @@
 				18D246E22033093E0098C050 /* senior.xcdatamodeld in Sources */,
 				18D246DA2033093E0098C050 /* AppDelegate.swift in Sources */,
 				18690D31204712F500612388 /* PinAndPlanViewController.swift in Sources */,
+				18543899205A4DFD007F7497 /* secondPlanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
