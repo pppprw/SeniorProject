@@ -15,11 +15,13 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var RegisterUsername: UITextField!
     @IBOutlet weak var RegisterPassword: UITextField!
     @IBOutlet weak var RegisterConfirmPassword: UITextField!
-    @IBOutlet weak var RegisterNextButton: UIButton!
+    @IBOutlet weak var Signupbutton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        Signupbutton.layer.masksToBounds = true
+        Signupbutton.layer.cornerRadius = 7
         // Do any additional setup after loading the view.
     }
 

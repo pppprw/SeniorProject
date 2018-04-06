@@ -24,7 +24,7 @@ class destination{
         return [
             destination(title: "Henderson Waves", img:UIImage (named:"6-Henderson Waves")!, name:"bf"),
             destination(title: "Canadaaa", img:UIImage (named:"canada")!, name:"prw"),
-            destination(title: "National Gallery", img:UIImage (named:"15 National gal")!, name:"bf"),
+        
             destination(title: "AJ Hackett", img:UIImage (named:"13:1 AJ Hackett at Sentosa")!, name:"bf"),
             destination(title: "Koreaaa", img:UIImage (named:"korea")!, name:"prw"),
             destination(title: "Taiwan", img:UIImage (named:"taiwan")!, name:"prw"),
