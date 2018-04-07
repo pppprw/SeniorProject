@@ -26,6 +26,7 @@
 		1892A050206655C3003AB320 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A04F206655C3003AB320 /* NotificationTableViewCell.swift */; };
 		1892A05220668184003AB320 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A05120668184003AB320 /* ExploreViewController.swift */; };
 		1892A0542066840A003AB320 /* top5CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A0532066840A003AB320 /* top5CollectionViewCell.swift */; };
+		189F836820775FBC0075CEC0 /* Uploading2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F836720775FBC0075CEC0 /* Uploading2ViewController.swift */; };
 		18B03BF820765D2C0069833E /* UploadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B03BF720765D2C0069833E /* UploadingViewController.swift */; };
 		18B03BFA20765F690069833E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B03BF920765F690069833E /* MapViewController.swift */; };
 		18D0A4082067874C005FA75D /* HotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0A4072067874C005FA75D /* HotCollectionViewCell.swift */; };
@@ -83,6 +84,7 @@
 		1892A04F206655C3003AB320 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		1892A05120668184003AB320 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		1892A0532066840A003AB320 /* top5CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = top5CollectionViewCell.swift; sourceTree = "<group>"; };
+		189F836720775FBC0075CEC0 /* Uploading2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uploading2ViewController.swift; sourceTree = "<group>"; };
 		18B03BF720765D2C0069833E /* UploadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadingViewController.swift; sourceTree = "<group>"; };
 		18B03BF920765F690069833E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		18D0A4072067874C005FA75D /* HotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				18B03BF720765D2C0069833E /* UploadingViewController.swift */,
+				189F836720775FBC0075CEC0 /* Uploading2ViewController.swift */,
 				18B03BF920765F690069833E /* MapViewController.swift */,
 			);
 			name = "Upload Page";
@@ -547,6 +550,7 @@
 				18E88421205508D400EA0550 /* CustomTableViewCell.swift in Sources */,
 				1892A0542066840A003AB320 /* top5CollectionViewCell.swift in Sources */,
 				18E77E20204EA10A005CC976 /* PinCollectionViewCell.swift in Sources */,
+				189F836820775FBC0075CEC0 /* Uploading2ViewController.swift in Sources */,
 				18E77E24204FDD1E005CC976 /* Pin.swift in Sources */,
 				1892A04D2066375F003AB320 /* NotificationViewController.swift in Sources */,
 				18358ACB203AB2C8005796B7 /* CollectionViewCell.swift in Sources */,
