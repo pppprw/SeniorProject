@@ -222,6 +222,6 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     
-
+///////////
 }
 
