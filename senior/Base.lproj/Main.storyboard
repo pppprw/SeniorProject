@@ -34,7 +34,7 @@
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Sign in"/>
                                 <connections>
-                                    <segue destination="QOb-0v-i1j" kind="modal" id="ntn-eH-e5B"/>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tg7-VU-gOP"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" minimumFontSize="30" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M7i-Qh-uNh" customClass="AkiraTextField" customModule="TextFieldEffects">
@@ -75,7 +75,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="ETY-qa-qD7" kind="modal" id="pcC-Pd-Oai"/>
+                                    <segue destination="ETY-qa-qD7" kind="show" id="iet-XA-k2W"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="25" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OR3-RY-mSb" customClass="AkiraTextField" customModule="TextFieldEffects">
@@ -84,7 +84,7 @@
                                 <color key="tintColor" red="0.62838155029999998" green="0.8391324282" blue="0.88585895299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.62838155031204224" green="0.83913242816925049" blue="0.88585895299911499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.62838155029999998" green="0.8391324282" blue="0.88585895299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,6 +101,7 @@
                         <outlet property="SignInPassword" destination="OR3-RY-mSb" id="qs7-ZX-Lmh"/>
                         <outlet property="SignInUsername" destination="M7i-Qh-uNh" id="ryc-Kz-MG8"/>
                         <outlet property="loginButton" destination="QEo-Jo-OjU" id="ePd-WI-3NK"/>
+                        <segue destination="QOb-0v-i1j" kind="show" identifier="tabBar" id="C21-3p-h0f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -863,7 +864,7 @@
                                 <color key="tintColor" red="0.62838155029999998" green="0.8391324282" blue="0.88585895299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.62838155029999998" green="0.8391324282" blue="0.88585895299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.62838155029999998" green="0.8391324282" blue="0.88585895299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -879,7 +880,7 @@
                                 <color key="tintColor" red="0.62838155029999998" green="0.8391324282" blue="0.88585895299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.62838155029999998" green="0.8391324282" blue="0.88585895299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.62838155029999998" green="0.8391324282" blue="0.88585895299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -894,12 +895,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIE-2t-gpt">
-                                <rect key="frame" x="53" y="463" width="269" height="34"/>
+                                <rect key="frame" x="53" y="457" width="269" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.59573892510000004" green="0.79997025870000005" blue="0.84980165159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpWithSender:" destination="ETY-qa-qD7" eventType="touchUpInside" id="iBH-Pe-Gwg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -910,7 +914,7 @@
                         <outlet property="RegisterName" destination="0Ia-Hh-4p7" id="Y08-qr-peK"/>
                         <outlet property="RegisterPassword" destination="Dg0-25-hbt" id="3Mm-rd-bzQ"/>
                         <outlet property="RegisterUsername" destination="w3t-od-yXN" id="c7E-Mx-aNv"/>
-                        <outlet property="Signupbutton" destination="wIE-2t-gpt" id="lAL-hU-zFc"/>
+                        <outlet property="SignupButton" destination="wIE-2t-gpt" id="VgU-1e-3R5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b98-yf-hez" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1745,7 +1749,6 @@
         <image name="user" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aiP-Np-dHh"/>
         <segue reference="fsX-9A-USI"/>
     </inferredMetricsTieBreakers>
 </document>
