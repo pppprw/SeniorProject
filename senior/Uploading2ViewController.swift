@@ -9,8 +9,7 @@
 import UIKit
 import Foundation
 
-class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var pickerView1: UIPickerView!
     @IBOutlet weak var pickerView2: UIPickerView!
@@ -35,6 +34,7 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var timeField: UITextField!
     @IBOutlet weak var timeField2: UITextField!
     
+    
     @IBAction func dateTapped(_ sender: UIButton) {
         if sender.layer.backgroundColor == UIColor.white.cgColor{
             sender.layer.backgroundColor = UIColor.lightGray.cgColor
@@ -44,29 +44,7 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
             sender.setTitleColor(.lightGray , for: .normal)
         }
         
-        if sender.tag == 1 {
-            print("Mon")
-        }else if sender.tag == 2 {
-            print("Tue")
-        }else if sender.tag == 3 {
-            print("Wed")
-        }else if sender.tag == 4 {
-            print("Thurs")
-        }else if sender.tag == 5 {
-            print("Fri")
-        }else if sender.tag == 6 {
-            print("Sat")
-        }else if sender.tag == 7 {
-            print("Sun")
-        }
-        
     }
-    
-    @IBAction func addAction(_ sender: AnyObject) {
-    
-     
-    }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -194,6 +172,9 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
         return label
     }
     
+    var openTime = ""
+    var closeTime = ""
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if pickerView == pickerView1 {
@@ -207,6 +188,7 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
             timeField.text = "\(hour) : \(minute)"
             timeField.resignFirstResponder()
             timeField.isHidden = true
+            openTime = timeField.text!
         } else {
             var hour2 = hours2[pickerView2.selectedRow(inComponent: 0)]
             var minute2 = minutes2[pickerView2.selectedRow(inComponent: 1)]
@@ -215,11 +197,102 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
             } else{
                 minute2 = minutes2[row]
             }
-            timeField2.text = " -  \(hour2) : \(minute2)"
+            timeField2.text = "\(hour2) : \(minute2)"
             timeField2.resignFirstResponder()
-            timeField.isHidden = true
+            timeField2.isHidden = true
+            closeTime = timeField2.text!
+        }
+        
+        
+    }
+    
+    var m = 0
+    var t = 0
+    var w = 0
+    var th = 0
+    var f = 0
+    var sa = 0
+    var su = 0
+    
+    @IBOutlet weak var timeTableView: UITableView!
+    var list = [String]()
+    var openday = 0
+    
+    @IBAction func addAction(_ sender: AnyObject) {
+        
+        //button//
+        if (mon.layer.backgroundColor == UIColor.lightGray.cgColor){
+            print("monday is selected")
+            m = 1
+        }
+        if (tue.layer.backgroundColor == UIColor.lightGray.cgColor){
+            print("tuesday is selected")
+            t = 1
+        }
+        if (wed.layer.backgroundColor == UIColor.lightGray.cgColor){
+            print("wednesday is selected")
+            w = 1
+        }
+        if (thurs.layer.backgroundColor == UIColor.lightGray.cgColor){
+            print("thursday is selected")
+            th = 1
+        }
+        if (fri.layer.backgroundColor == UIColor.lightGray.cgColor){
+            print("friday is selected")
+            f = 1
+        }
+        if (sat.layer.backgroundColor == UIColor.lightGray.cgColor){
+            print("saturday is selected")
+            sa = 1
+        }
+        if (sun.layer.backgroundColor == UIColor.lightGray.cgColor){
+            print("sunday is selected")
+            su = 1
+        }
+        
+        openday = m + t + w + th + f + sa + su
+        //pickerView//
+        print("\(openTime) - \(closeTime)")
+        print(openday)
+        
+        // action to table view
+        if (timeField.text != ""){
+            self.list.append("\(openTime) - \(closeTime)")
+            timeTableView.reloadData()
+        } else {
+            print("nothing is selected")
+        }
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let timeCell = UITableViewCell(style: .default, reuseIdentifier: "timecell")
+        timeCell.textLabel?.text = list[indexPath.row]
+        
+        return timeCell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete{
+            self.list.remove(at: indexPath.row)
+            timeTableView.reloadData()
         }
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        timeTableView.reloadData()
+    }
+    
+    
     
     
 ///////////
