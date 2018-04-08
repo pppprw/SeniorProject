@@ -292,9 +292,6 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
         timeTableView.reloadData()
     }
     
-    
-    
-    
-///////////
+    //outlet
 }
 
