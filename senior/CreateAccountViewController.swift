@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
@@ -59,31 +60,41 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
+    
     // Sign Up method
     @IBAction func signUp (sender:UIButton){
         //let uid = "user" + String(arc4random_uniform(1000000))
         let name: String = RegisterName.text!
         let email: String = RegisterEmail.text!
-        let uid: String = RegisterUsername.text!
+        let username: String = RegisterUsername.text!
         let password: String = RegisterPassword.text!
         let conpassword: String = RegisterConfirmPassword.text!
         
-        if name.isEmpty||email.isEmpty||uid.isEmpty||password.isEmpty||conpassword.isEmpty{
-            callAlert(title: "Alert", message: "Please fill in all of the information.")
+        if name.isEmpty||email.isEmpty||username.isEmpty||password.isEmpty||conpassword.isEmpty{
+            callAlert(title: "Error", message: "Please fill in all of the information.")
+        }else if password.count < 6{
+            callAlert(title: "Error", message: "Password must be longer than 6 characters.")
         }else if password != conpassword{
-            callAlert(title: "Alert", message: "Your password is not correct.")
+            callAlert(title: "Error", message: "Your password is not correct.")
+        }else if isValidEmail(testStr: email) == false{
+            callAlert(title: "Error", message: "Invalid email address.")
         }else{
-            self.ref.child("Users/\(uid)").observeSingleEvent(of: DataEventType.value) { (snapshot) in
-                if snapshot.exists(){
-                    self.callAlert(title: "Sorry", message: "Username already exist.")
-                    print (snapshot)
-                }else{
-                    self.ref.child("Users").child(uid).setValue(["Username": uid,"Password": password,"Name": name,"Email": email])
+            //TODO: check for duplicated username
+            Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+                let uid = user?.uid as! String
+                if let u = user{
+                    self.ref.child("Users").child(uid).setValue(["Username": username,"FullName": name,"Email": email])
                     self.dismiss(animated: true, completion: nil)
+                    print("user created :\(uid)")
+                }else {
+                    print(error?.localizedDescription)
                 }
-                //            let check = snapshot.value as! NSDictionary
-                //            let username = check["jarbbb"]
-                //            print (check)
             }
         }
     }
