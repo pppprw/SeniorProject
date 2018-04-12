@@ -277,10 +277,6 @@
                                             <segue destination="jWm-GA-MRW" kind="embed" id="bf3-WO-lyH"/>
                                         </connections>
                                     </containerView>
-                                    <containerView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2YT-I3-b9t">
-                                        <rect key="frame" x="9" y="154" width="357" height="457"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    </containerView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -292,7 +288,6 @@
                     <connections>
                         <outlet property="PinView" destination="VoQ-Bi-dLs" id="ZVk-Ns-A1c"/>
                         <outlet property="PlanView" destination="MQg-16-9Km" id="mAa-mO-YHJ"/>
-                        <outlet property="secondPlanView" destination="2YT-I3-b9t" id="tSf-HV-knB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34y-lV-q0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1037,7 +1032,17 @@
                                 <state key="normal" title="  Create New Plan" image="plus-button">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="createNewPlan:" destination="iSD-4m-iw3" eventType="touchUpInside" id="N9W-Ni-Jr8"/>
+                                </connections>
                             </button>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AxM-Hh-1j6">
+                                <rect key="frame" x="0.0" y="-8" width="356" height="461"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="6KC-6O-dyN" kind="embed" id="SGz-WS-tqP"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Jtz-Iv-eLU" firstAttribute="top" secondItem="vSe-Kv-L80" secondAttribute="bottom" id="CWO-Fs-7ly"/>
@@ -1048,13 +1053,14 @@
                     </view>
                     <size key="freeformSize" width="357" height="445"/>
                     <connections>
+                        <outlet property="createNewPlanView" destination="AxM-Hh-1j6" id="cN4-dT-0R1"/>
                         <outlet property="tableView" destination="vSe-Kv-L80" id="ise-ZD-afQ"/>
                         <segue destination="RKN-0l-FNN" kind="show" identifier="segue" id="5au-v1-iih"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZR-Ir-BtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3425" y="1779"/>
+            <point key="canvasLocation" x="3424.8000000000002" y="1778.8605697151427"/>
         </scene>
         <!--Second Plan View Controller-->
         <scene sceneID="4w7-iY-ZXB">
@@ -1296,7 +1302,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="km9-HD-xio">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="576"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="625"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AE6-HT-hhy">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="660"/>
@@ -1467,14 +1473,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Admission fee" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="7Xh-wJ-jw4">
-                                                <rect key="frame" x="14" y="422" width="347" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="57k-W3-suo">
                                                 <rect key="frame" x="131" y="500" width="230" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1565,6 +1563,14 @@
                                                     <segue destination="n5H-P7-Aet" kind="show" id="yLK-nG-0Sp"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Admission fee" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="7Xh-wJ-jw4">
+                                                <rect key="frame" x="19" y="422" width="336" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1629,7 +1635,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8R-Wv-2jh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1151"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                                 <subviews>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueO-Ke-YCn">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
@@ -2107,6 +2113,102 @@
             </objects>
             <point key="canvasLocation" x="1996" y="-81"/>
         </scene>
+        <!--Data Source-->
+        <scene sceneID="kVL-7d-JcF">
+            <objects>
+                <viewController id="6KC-6O-dyN" customClass="CreateNewTripViewController" customModule="senior" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g8V-EM-HYa"/>
+                        <viewControllerLayoutGuide type="bottom" id="wL2-Bc-SWh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M5N-3w-tyA">
+                        <rect key="frame" x="0.0" y="0.0" width="356" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U38-cZ-Sus">
+                                <rect key="frame" x="0.0" y="0.0" width="356" height="500"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcL-5N-dHl">
+                                        <rect key="frame" x="0.0" y="0.0" width="356" height="500"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXu-YZ-jwz">
+                                                <rect key="frame" x="15" y="15" width="95" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a trip's name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baI-BL-TyC">
+                                                <rect key="frame" x="15" y="44" width="324" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When would you like to go?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hn-iL-WXU">
+                                                <rect key="frame" x="15" y="168" width="217" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where would you like to go?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikT-4f-8do">
+                                                <rect key="frame" x="15" y="91" width="223" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where is your destination?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NwY-XD-tBf">
+                                                <rect key="frame" x="15" y="120" width="324" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FJa-gI-CUV" customClass="FSCalendar">
+                                                <rect key="frame" x="25" y="197" width="304" height="166"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="6KC-6O-dyN" id="CBC-n2-p3V"/>
+                                                    <outlet property="delegate" destination="6KC-6O-dyN" id="H7f-UA-4V8"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="500" id="lLS-22-5uz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LcL-5N-dHl" firstAttribute="top" secondItem="U38-cZ-Sus" secondAttribute="top" id="4X2-oW-3f6"/>
+                                    <constraint firstAttribute="bottom" secondItem="LcL-5N-dHl" secondAttribute="bottom" id="9Ch-dU-xMP"/>
+                                    <constraint firstAttribute="trailing" secondItem="LcL-5N-dHl" secondAttribute="trailing" id="Poc-ek-0kV"/>
+                                    <constraint firstItem="LcL-5N-dHl" firstAttribute="leading" secondItem="U38-cZ-Sus" secondAttribute="leading" id="bos-rA-vY1"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="U38-cZ-Sus" secondAttribute="bottom" id="0jE-9a-SfJ"/>
+                            <constraint firstItem="LcL-5N-dHl" firstAttribute="width" secondItem="M5N-3w-tyA" secondAttribute="width" id="HSn-9D-CtZ"/>
+                            <constraint firstAttribute="trailing" secondItem="U38-cZ-Sus" secondAttribute="trailing" id="fEC-tT-dyS"/>
+                            <constraint firstItem="U38-cZ-Sus" firstAttribute="leading" secondItem="M5N-3w-tyA" secondAttribute="leading" id="m7B-Nw-iKv"/>
+                            <constraint firstItem="U38-cZ-Sus" firstAttribute="top" secondItem="M5N-3w-tyA" secondAttribute="top" id="vLh-0n-kAT"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="356" height="500"/>
+                    <connections>
+                        <outlet property="TripNameTxtfield" destination="baI-BL-TyC" id="rzU-nQ-kvY"/>
+                        <outlet property="WhereTxtfield" destination="NwY-XD-tBf" id="oDx-xE-aQ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMJ-kC-r1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3424" y="2332.5337331334335"/>
+        </scene>
     </scenes>
     <resources>
         <image name="P3117408" width="347" height="140"/>
@@ -2133,6 +2235,6 @@
         <segue reference="lci-L1-Ded"/>
         <segue reference="Ren-qV-I7I"/>
         <segue reference="MdW-Vu-2KB"/>
-        <segue reference="ZTd-By-9ws"/>
+        <segue reference="yLK-nG-0Sp"/>
     </inferredMetricsTieBreakers>
 </document>

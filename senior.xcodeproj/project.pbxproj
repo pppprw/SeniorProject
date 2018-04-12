@@ -16,6 +16,7 @@
 		18358ACD203ACF89005796B7 /* destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358ACC203ACF89005796B7 /* destination.swift */; };
 		184ABAA9207F10D5009729EC /* Assets 13-27-34-945 10-57-33-891.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184ABAA8207F10CE009729EC /* Assets 13-27-34-945 10-57-33-891.xcassets */; };
 		18543899205A4DFD007F7497 /* secondPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18543898205A4DFD007F7497 /* secondPlanViewController.swift */; };
+		1861FB33207F965500703820 /* CreateNewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861FB32207F965500703820 /* CreateNewTripViewController.swift */; };
 		18690D31204712F500612388 /* PinAndPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18690D30204712F500612388 /* PinAndPlanViewController.swift */; };
 		1878AB8D204587C3008D5AF5 /* MHPinterestLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1878AB8E204587C3008D5AF5 /* MHPinterestLayout.framework */; };
 		1878AB902045A3D2008D5AF5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878AB8F2045A3D2008D5AF5 /* Extension.swift */; };
@@ -75,6 +76,7 @@
 		18358ACC203ACF89005796B7 /* destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = destination.swift; sourceTree = "<group>"; };
 		184ABAA8207F10CE009729EC /* Assets 13-27-34-945 10-57-33-891.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 13-27-34-945 10-57-33-891.xcassets"; sourceTree = "<group>"; };
 		18543898205A4DFD007F7497 /* secondPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondPlanViewController.swift; sourceTree = "<group>"; };
+		1861FB32207F965500703820 /* CreateNewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTripViewController.swift; sourceTree = "<group>"; };
 		18690D30204712F500612388 /* PinAndPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAndPlanViewController.swift; sourceTree = "<group>"; };
 		1878AB8E204587C3008D5AF5 /* MHPinterestLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MHPinterestLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1878AB8F2045A3D2008D5AF5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				18E8841E2055008F00EA0550 /* PlanViewController.swift */,
+				1861FB32207F965500703820 /* CreateNewTripViewController.swift */,
 				18E88420205508D400EA0550 /* CustomTableViewCell.swift */,
 				18543898205A4DFD007F7497 /* secondPlanViewController.swift */,
 			);
@@ -481,8 +484,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-senior/Pods-senior-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/MHPinterestLayout/MHPinterestLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftCommonUtils/SwiftCommonUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
@@ -491,8 +496,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MHPinterestLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCommonUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
@@ -544,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1861FB33207F965500703820 /* CreateNewTripViewController.swift in Sources */,
 				1821A666205BC8A40021C69F /* destViewController.swift in Sources */,
 				1878AB902045A3D2008D5AF5 /* Extension.swift in Sources */,
 				180CFAEB20419B8600DCFC75 /* CreateAccountViewController.swift in Sources */,

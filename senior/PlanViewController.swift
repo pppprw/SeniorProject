@@ -15,6 +15,12 @@ var elementsName = ["Vancouver", "Seoul"]
 class PlanViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var createNewPlanView: UIView!
+
+    @IBAction func createNewPlan(_ sender: Any) {
+        createNewPlanView.isHidden = false
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

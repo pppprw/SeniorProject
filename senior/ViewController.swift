@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        loginButton.layer.masksToBounds = true
         loginButton.layer.cornerRadius = 7
         ref = Database.database().reference()
     }

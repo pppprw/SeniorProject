@@ -12,7 +12,6 @@ class PinAndPlanViewController: UIViewController {
 
     @IBOutlet weak var PinView: UIView!
     @IBOutlet weak var PlanView: UIView!
-    @IBOutlet weak var secondPlanView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,14 +29,14 @@ class PinAndPlanViewController: UIViewController {
             {
                     self.PinView.alpha = 0.0
                     self.PlanView.alpha = 1.0
-                    self.secondPlanView.alpha = 0.0
+           
             })
         }
         else{
             UIView.animate(withDuration: 0.5, animations: {
                 self.PinView.alpha = 1.0
                 self.PlanView.alpha = 0.0
-                self.secondPlanView.alpha = 0.0
+               
                 })
         }
     }
