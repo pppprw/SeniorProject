@@ -8,11 +8,12 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var SignInUsername: UITextField!
+    @IBOutlet weak var SignInEmail: UITextField!
     @IBOutlet weak var SignInPassword: UITextField!
     
     var ref: DatabaseReference!
@@ -44,28 +45,33 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signIn(_ sender: Any) {
-        let username:String = SignInUsername.text!
+        let email:String = SignInEmail.text!
         let password:String = SignInPassword.text!
-        
-        
-        if username.isEmpty == false && password.isEmpty == false{
-            self.ref.child("Users/\(username)").observeSingleEvent(of: .value) { (snapshot) in
-                if snapshot.exists(){
-                    let check = snapshot.childSnapshot(forPath: "Password").value as! String
-                    if password == check{
-                        print ("User logged in")
-                        self.performSegue(withIdentifier: "tabBar", sender: self)
-                    }else{
-                        print ("User unsuccessfully log in")
-                    }
-                    print (check)
-                    print (snapshot)
-                    
+        if email.isEmpty == false && password.isEmpty == false{
+            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                if let u = user{
+                    self.performSegue(withIdentifier: "tabBar", sender: self)
+                    print("User sign in: \(user?.uid)")
                 }else{
-                    self.callAlert(title: "Sorry", message: "Username doesn't exist.")
+                    print(error?.localizedDescription)
                 }
-                
             }
+//            self.ref.child("Users/\(username)").observeSingleEvent(of: .value) { (snapshot) in
+//                if snapshot.exists(){
+//                    print (snapshot)
+//                    let check = snapshot.childSnapshot(forPath: "Password").value as! String
+//                    if password == check{
+//                        print ("User logged in")
+//                        self.performSegue(withIdentifier: "tabBar", sender: self)
+//                    }else{
+//                        print ("User unsuccessfully log in")
+//                        self.callAlert(title: "Sorry", message: "Password is not correct")
+//                    }
+//                    print (check)
+//                }else{
+//                    self.callAlert(title: "Sorry", message: "Username doesn't exist.")
+//                }
+//            }
         }
     }
     
