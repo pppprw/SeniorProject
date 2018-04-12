@@ -216,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				18D246E82033093E0098C050 /* Info.plist */,
+				184ABAA8207F10CE009729EC /* Assets 13-27-34-945 10-57-33-891.xcassets */,
 				18D246E02033093E0098C050 /* senior.xcdatamodeld */,
 			);
 			name = Model;
@@ -225,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				18D246DD2033093E0098C050 /* Main.storyboard */,
-				184ABAA8207F10CE009729EC /* Assets 13-27-34-945 10-57-33-891.xcassets */,
 				180CFAEE2042985800DCFC75 /* LaunchScreen.storyboard */,
 			);
 			name = storyboard;

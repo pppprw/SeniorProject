@@ -7,19 +7,22 @@
 //
 
 import UIKit
-//import FSCalendar
+import FSCalendar
 
-class CreateNewTripViewController: UIViewController {
+class CreateNewTripViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate  {
 
     @IBOutlet weak var TripNameTxtfield: UITextField!
     @IBOutlet weak var WhereTxtfield: UITextField!
     
-   // fileprivate weak var calendar: FSCalendar!
+    fileprivate weak var calendar: FSCalendar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
  
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        print(date)
     }
     
 
