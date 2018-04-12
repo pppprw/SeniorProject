@@ -9,7 +9,13 @@
 import UIKit
 import MapKit
 
+protocol MapViewControllerDelegate: class {
+    func getDestination(_ destinationk:String) -> Void
+}
+
 class MapViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
+    
+    weak var delegate:MapViewControllerDelegate?
 
     @IBAction func searchButton(_ sender: Any) {
         let searchController = UISearchController(searchResultsController: nil)
@@ -72,13 +78,24 @@ class MapViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegat
                 let nameOfDestination = searchBar.text as! String
                 
                 if (annotation.title != nil){
+                    self.delegate?.getDestination(nameOfDestination)
                     print(nameOfDestination)
                     print("OK")
                 }
             }
         }
     }
-  
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
+        
+        if let annotationTitle = view.annotation?.title
+        {
+            print("annotation with title: \(annotationTitle!)")
+            //performSegue(withIdentifier: "sendInfo", sender: self)
+            self.navigationController?.popViewController(animated: true)
+
+        }
+    }
     
     
     

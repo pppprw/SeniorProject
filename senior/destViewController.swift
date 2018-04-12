@@ -27,17 +27,19 @@ class destViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var input: UITextField!
    
     @IBAction func addComment(_ sender: AnyObject) {
-       
             comment.append(input.text!)
-
-        
     }
    
     
     var image = UIImage()
     
+    // TRONE NEEEE CLICKABLE LABEL AT DESTVIEWCONTROLLER NA JA ( USERNAME, NAMEOFDEST, LOCATION )
+    @IBOutlet weak var locationName: UILabel!
+    @IBOutlet weak var NameOfDestination: UILabel!
+    @IBOutlet weak var usernameLabelelelel: UILabel!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         destImage.layer.masksToBounds = true
         destImage.layer.cornerRadius = 10
@@ -48,10 +50,45 @@ class destViewController: UIViewController, UITableViewDelegate, UITableViewData
         exploreButton.layer.masksToBounds = true
         exploreButton.layer.cornerRadius = 7
         
+        let locationtap = UITapGestureRecognizer(target: self, action: #selector(destViewController.locationtapFunction))
+        locationName.isUserInteractionEnabled = true
+        locationName.addGestureRecognizer(locationtap)
         
+        let destinationtap = UITapGestureRecognizer(target: self, action: #selector(destViewController.desttapFunction))
+        NameOfDestination.isUserInteractionEnabled = true
+        NameOfDestination.addGestureRecognizer(destinationtap)
+        
+        let usertap = UITapGestureRecognizer(target: self, action: #selector(destViewController.usertapFunction))
+        usernameLabelelelel.isUserInteractionEnabled = true
+        usernameLabelelelel.addGestureRecognizer(usertap)
         
     }
+    @objc func locationtapFunction(sender:UITapGestureRecognizer) {
+        print("location working")
+        performSegue(withIdentifier: "location", sender: UILabel.self)
+    }
+    @objc func desttapFunction(sender:UITapGestureRecognizer) {
+        print("dest working")
     
+    }
+    @objc func usertapFunction(sender:UITapGestureRecognizer) {
+        print("user working")
+        performSegue(withIdentifier: "userprofilesegue", sender: UILabel.self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "location" {
+            if let locationDestination = segue.destination as? SecondViewController{
+                locationDestination.name2 = locationName.text
+            }
+        }
+        if segue.identifier == "userprofilesegue" {
+            if let profileDestination = segue.destination as? ProfileViewController{
+                profileDestination.name3 = usernameLabelelelel.text
+            }
+        }
+        
+    }
     
     func resizeImage(_ image: UIImage?, newWidth: CGFloat) -> UIImage? {
         guard let image = image else {
@@ -94,7 +131,7 @@ class destViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 80
     }
     
 }

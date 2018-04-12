@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		180CFAEB20419B8600DCFC75 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180CFAEA20419B8600DCFC75 /* CreateAccountViewController.swift */; };
-		180CFAED20428EE600DCFC75 /* Assets 13-27-34-945.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180CFAEC20428EE500DCFC75 /* Assets 13-27-34-945.xcassets */; };
 		180CFAEF2042985800DCFC75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180CFAEE2042985800DCFC75 /* LaunchScreen.storyboard */; };
+		181508FC207CEADD00C27862 /* TripNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181508FB207CEADD00C27862 /* TripNameCollectionViewCell.swift */; };
 		1821A666205BC8A40021C69F /* destViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1821A665205BC8A40021C69F /* destViewController.swift */; };
 		18358AC9203A821C005796B7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358AC8203A821C005796B7 /* SecondViewController.swift */; };
 		18358ACB203AB2C8005796B7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358ACA203AB2C8005796B7 /* CollectionViewCell.swift */; };
 		18358ACD203ACF89005796B7 /* destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358ACC203ACF89005796B7 /* destination.swift */; };
+		184ABAA9207F10D5009729EC /* Assets 13-27-34-945 10-57-33-891.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184ABAA8207F10CE009729EC /* Assets 13-27-34-945 10-57-33-891.xcassets */; };
 		18543899205A4DFD007F7497 /* secondPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18543898205A4DFD007F7497 /* secondPlanViewController.swift */; };
 		18690D31204712F500612388 /* PinAndPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18690D30204712F500612388 /* PinAndPlanViewController.swift */; };
 		1878AB8D204587C3008D5AF5 /* MHPinterestLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1878AB8E204587C3008D5AF5 /* MHPinterestLayout.framework */; };
@@ -66,12 +67,13 @@
 /* Begin PBXFileReference section */
 		14738A916401D65B609C4557 /* Pods-senior.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-senior.release.xcconfig"; path = "Pods/Target Support Files/Pods-senior/Pods-senior.release.xcconfig"; sourceTree = "<group>"; };
 		180CFAEA20419B8600DCFC75 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		180CFAEC20428EE500DCFC75 /* Assets 13-27-34-945.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 13-27-34-945.xcassets"; sourceTree = "<group>"; };
 		180CFAEE2042985800DCFC75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		181508FB207CEADD00C27862 /* TripNameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNameCollectionViewCell.swift; sourceTree = "<group>"; };
 		1821A665205BC8A40021C69F /* destViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destViewController.swift; sourceTree = "<group>"; };
 		18358AC8203A821C005796B7 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		18358ACA203AB2C8005796B7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		18358ACC203ACF89005796B7 /* destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = destination.swift; sourceTree = "<group>"; };
+		184ABAA8207F10CE009729EC /* Assets 13-27-34-945 10-57-33-891.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 13-27-34-945 10-57-33-891.xcassets"; sourceTree = "<group>"; };
 		18543898205A4DFD007F7497 /* secondPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondPlanViewController.swift; sourceTree = "<group>"; };
 		18690D30204712F500612388 /* PinAndPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAndPlanViewController.swift; sourceTree = "<group>"; };
 		1878AB8E204587C3008D5AF5 /* MHPinterestLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MHPinterestLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 				18B03BF720765D2C0069833E /* UploadingViewController.swift */,
 				189F836720775FBC0075CEC0 /* Uploading2ViewController.swift */,
 				18B03BF920765F690069833E /* MapViewController.swift */,
+				181508FB207CEADD00C27862 /* TripNameCollectionViewCell.swift */,
 			);
 			name = "Upload Page";
 			sourceTree = "<group>";
@@ -210,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				18D246E82033093E0098C050 /* Info.plist */,
-				180CFAEC20428EE500DCFC75 /* Assets 13-27-34-945.xcassets */,
 				18D246E02033093E0098C050 /* senior.xcdatamodeld */,
 			);
 			name = Model;
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				18D246DD2033093E0098C050 /* Main.storyboard */,
+				184ABAA8207F10CE009729EC /* Assets 13-27-34-945 10-57-33-891.xcassets */,
 				180CFAEE2042985800DCFC75 /* LaunchScreen.storyboard */,
 			);
 			name = storyboard;
@@ -448,9 +451,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				180CFAEF2042985800DCFC75 /* LaunchScreen.storyboard in Resources */,
+				184ABAA9207F10D5009729EC /* Assets 13-27-34-945 10-57-33-891.xcassets in Resources */,
 				FA4B5B9E2078CC1800F48AAD /* GoogleService-Info.plist in Resources */,
 				18D246DF2033093E0098C050 /* Main.storyboard in Resources */,
-				180CFAED20428EE600DCFC75 /* Assets 13-27-34-945.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +572,7 @@
 				18B03BF820765D2C0069833E /* UploadingViewController.swift in Sources */,
 				18D0A4082067874C005FA75D /* HotCollectionViewCell.swift in Sources */,
 				1892A04B2064DB5D003AB320 /* profiledestination.swift in Sources */,
+				181508FC207CEADD00C27862 /* TripNameCollectionViewCell.swift in Sources */,
 				18B03BFA20765F690069833E /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

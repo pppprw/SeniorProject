@@ -43,15 +43,22 @@ extension UIView {
 /////////////////////////// START HERE ////////////////////////////////
 
 
+extension UploadingViewController: MapViewControllerDelegate {
+    
+    func getDestination(_ destinationk: String) {
+        print("\(destinationk) is already SELECTED !!!!!!!!!!!")
+        self.label.text = destinationk
+        let new = self.label.text as! String
+        print("\(new) ma leaw jaaaaa")
+        
+    }
+
+}
+
 class UploadingViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     
-    
     @IBOutlet weak var label: UILabel!
-    
-    // This variable will hold the data being passed from the First View Controller
-    
-    
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -75,6 +82,8 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
     
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +95,9 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
         
         nextButton.layer.masksToBounds = true
         nextButton.layer.cornerRadius = 7
- 
+        
+        //self.getDestination("")
+        
     }
   
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -100,5 +111,14 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
         self.dismiss(animated: true, completion:  nil)
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "map" {
+            let mapController = segue.destination as! MapViewController
+            mapController.delegate = self
+        }
+    }
 }
+
+
 

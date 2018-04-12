@@ -19,15 +19,23 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
     var destinations = destination.createList()
     var layout = MHPinterestLayout()
     
-
+    var name2:String?
+    var name3:String?
+    @IBOutlet weak var navigationTitle: UINavigationItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         layout.delegate = self
         layout.headerHeight = 10
         layout.footerHeight = 10
         self.collectionView.collectionViewLayout = layout
+        
+        //////////////   TITLE   //////////////
+        if let nameToDisplay = name2{
+            print(nameToDisplay)
+            self.navigationTitle.title = nameToDisplay
+        }
     }
     
 

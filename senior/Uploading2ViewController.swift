@@ -9,11 +9,13 @@
 import UIKit
 import Foundation
 
-class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
+class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
+    
 
     @IBOutlet weak var pickerView1: UIPickerView!
     @IBOutlet weak var pickerView2: UIPickerView!
-    
+    @IBOutlet weak var NewtripTextField: UITextField!
+    @IBOutlet weak var POSTSTYLE: UIButton!
     
     let hours = ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"]
     let minutes = ["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
@@ -48,6 +50,7 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         pickerView1.dataSource = self
         pickerView1.delegate = self
         pickerView2.dataSource = self
@@ -105,7 +108,10 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
         timeField2.inputView = pickerView2
         timeField2.textAlignment = .center
  
+        timeTableView.isHidden = true
         
+        POSTSTYLE.layer.masksToBounds = true
+        POSTSTYLE.layer.cornerRadius = 7
     }
 
     
@@ -214,56 +220,81 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
     var sa = 0
     var su = 0
     
+    var openDate = [String]()
+    
     @IBOutlet weak var timeTableView: UITableView!
     var list = [String]()
-    var openday = 0
     
+    @IBOutlet weak var placeholder: UILabel!
     @IBAction func addAction(_ sender: AnyObject) {
         
         //button//
         if (mon.layer.backgroundColor == UIColor.lightGray.cgColor){
-            print("monday is selected")
             m = 1
+            openDate.append("Mon")
         }
         if (tue.layer.backgroundColor == UIColor.lightGray.cgColor){
-            print("tuesday is selected")
             t = 1
+            openDate.append("Tue")
         }
         if (wed.layer.backgroundColor == UIColor.lightGray.cgColor){
-            print("wednesday is selected")
             w = 1
+            openDate.append("Wed")
         }
         if (thurs.layer.backgroundColor == UIColor.lightGray.cgColor){
-            print("thursday is selected")
             th = 1
+            openDate.append("Thurs")
         }
         if (fri.layer.backgroundColor == UIColor.lightGray.cgColor){
-            print("friday is selected")
             f = 1
+            openDate.append("Fri")
         }
         if (sat.layer.backgroundColor == UIColor.lightGray.cgColor){
-            print("saturday is selected")
             sa = 1
+            openDate.append("Sat")
         }
         if (sun.layer.backgroundColor == UIColor.lightGray.cgColor){
-            print("sunday is selected")
             su = 1
+           openDate.append("Sun")
         }
         
-        openday = m + t + w + th + f + sa + su
         //pickerView//
         print("\(openTime) - \(closeTime)")
-        print(openday)
+        print(openDate)
+        print(openDate[0],openDate[openDate.count-1])
+        
         
         // action to table view
         if (timeField.text != ""){
-            self.list.append("\(openTime) - \(closeTime)")
+            self.list.append("\(openDate[0]) - \(openDate[openDate.count-1])  :  \(openTime) - \(closeTime)")
             timeTableView.reloadData()
         } else {
             print("nothing is selected")
         }
         
+        //Table
+        if timeTableView.isHidden == true{
+            timeTableView.isHidden = !timeTableView.isHidden
+            placeholder.isHidden = true
+            
+        }
         
+        mon.layer.backgroundColor = UIColor.white.cgColor
+        mon.setTitleColor(.lightGray , for: .normal)
+        tue.layer.backgroundColor = UIColor.white.cgColor
+        tue.setTitleColor(.lightGray , for: .normal)
+        wed.layer.backgroundColor = UIColor.white.cgColor
+        wed.setTitleColor(.lightGray , for: .normal)
+        thurs.layer.backgroundColor = UIColor.white.cgColor
+        thurs.setTitleColor(.lightGray , for: .normal)
+        fri.layer.backgroundColor = UIColor.white.cgColor
+        fri.setTitleColor(.lightGray , for: .normal)
+        sat.layer.backgroundColor = UIColor.white.cgColor
+        sat.setTitleColor(.lightGray , for: .normal)
+        sun.layer.backgroundColor = UIColor.white.cgColor
+        sun.setTitleColor(.lightGray , for: .normal)
+        
+        openDate = [String]()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -292,6 +323,78 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
         timeTableView.reloadData()
     }
     
-    //outlet
+    //////////////////  Collection View  ////////////////////
+    
+    @IBOutlet weak var TripNameCollectionView: UICollectionView!
+    var tripCount = trips.count
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+            return tripCount+1
+        
+    
+    }
+    
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = TripNameCollectionView.dequeueReusableCell(withReuseIdentifier: "namecell", for: indexPath) as! TripNameCollectionViewCell
+        let newTrip = NewtripTextField.text
+        var trips2 = [String]()
+        
+        if newTrip != ""{
+            trips2.append(newTrip!)
+            for i in 0...tripCount-1 {
+                trips2.append(trips[i])
+            }
+            
+        }else{
+            for i in 0...tripCount-1 {
+                trips2.append(trips[i])
+            }
+            trips2.append("")
+        }
+        cell.labellabellabel.text = trips2[indexPath.row]
+        print(trips2)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        let selectedCell:UICollectionViewCell = TripNameCollectionView.cellForItem(at: indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor.lightGray
+        
+        let myCell = TripNameCollectionView.cellForItem(at: indexPath) as! TripNameCollectionViewCell
+        myCell.labellabellabel.textColor = UIColor.white
+        
+    
+        // when selected, colour change !!!!
+        if indexPath.row == 0{
+            print(trips[0])
+        }
+        if indexPath.row == 1{
+            print(trips[1])
+        }
+        if indexPath.row == 2{
+            print(trips[2])
+        }
+        if indexPath.row == 3{
+            print(trips[3])
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let deselectedCell:UICollectionViewCell = TripNameCollectionView.cellForItem(at: indexPath)!
+        deselectedCell.contentView.backgroundColor = UIColor.white
+        
+        let demyCell = TripNameCollectionView.cellForItem(at: indexPath) as! TripNameCollectionViewCell
+        demyCell.labellabellabel.textColor = UIColor.lightGray
+    }
+    
+    @IBAction func POSTACTION(_ sender: UIButton) {
+        self.TripNameCollectionView.reloadData()
+       
+
+    }
+    
 }
 
