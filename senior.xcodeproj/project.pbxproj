@@ -20,6 +20,7 @@
 		18690D31204712F500612388 /* PinAndPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18690D30204712F500612388 /* PinAndPlanViewController.swift */; };
 		1878AB8D204587C3008D5AF5 /* MHPinterestLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1878AB8E204587C3008D5AF5 /* MHPinterestLayout.framework */; };
 		1878AB902045A3D2008D5AF5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878AB8F2045A3D2008D5AF5 /* Extension.swift */; };
+		18866BDC2080FB850072187F /* PlanDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18866BDB2080FB850072187F /* PlanDetailCollectionViewCell.swift */; };
 		1892A04420640A3F003AB320 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A04320640A3F003AB320 /* ProfileViewController.swift */; };
 		1892A0462064BAFC003AB320 /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A0452064BAFC003AB320 /* ButtonCollectionViewCell.swift */; };
 		1892A0492064DA24003AB320 /* DestinationInProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A0482064DA24003AB320 /* DestinationInProfileCollectionViewCell.swift */; };
@@ -80,6 +81,7 @@
 		18690D30204712F500612388 /* PinAndPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAndPlanViewController.swift; sourceTree = "<group>"; };
 		1878AB8E204587C3008D5AF5 /* MHPinterestLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MHPinterestLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1878AB8F2045A3D2008D5AF5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		18866BDB2080FB850072187F /* PlanDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		1892A04320640A3F003AB320 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1892A0452064BAFC003AB320 /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		1892A0482064DA24003AB320 /* DestinationInProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationInProfileCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				1861FB32207F965500703820 /* CreateNewTripViewController.swift */,
 				18E88420205508D400EA0550 /* CustomTableViewCell.swift */,
 				18543898205A4DFD007F7497 /* secondPlanViewController.swift */,
+				18866BDB2080FB850072187F /* PlanDetailCollectionViewCell.swift */,
 			);
 			name = Plan;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				1892A04420640A3F003AB320 /* ProfileViewController.swift in Sources */,
 				18D246DC2033093E0098C050 /* ViewController.swift in Sources */,
 				18E88421205508D400EA0550 /* CustomTableViewCell.swift in Sources */,
+				18866BDC2080FB850072187F /* PlanDetailCollectionViewCell.swift in Sources */,
 				1892A0542066840A003AB320 /* top5CollectionViewCell.swift in Sources */,
 				18E77E20204EA10A005CC976 /* PinCollectionViewCell.swift in Sources */,
 				189F836820775FBC0075CEC0 /* Uploading2ViewController.swift in Sources */,

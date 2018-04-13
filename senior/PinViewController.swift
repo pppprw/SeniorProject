@@ -116,11 +116,7 @@ class PinViewController: UIViewController, UICollectionViewDelegate, UICollectio
         planChoices.append(contentsOf: elementsName)
         print(planChoices[row])
         print(row)
-    
         selectRow = row
-//        if planChoices[row] == planChoices[0] {
-//                performSegue(withIdentifier: "createPlanfromPin", sender: choosePlanpickerView.numberOfRows(inComponent: 0))
-//        }
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {

@@ -7,23 +7,34 @@
 //
 import UIKit
 
-class secondPlanViewController: UIViewController {
+class secondPlanViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    /////DEAW MA CHANGEEE
+    var pins = pin.createList()
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var myImageView: UIImageView!
+
+    @IBOutlet weak var planDetailCollectionView: UICollectionView!
+    
     @IBOutlet weak var desLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //TRIP'S NAME
         titleLabel.text = elementsName[myIndex]
         desLabel.text = elementsName[myIndex]
-        myImageView.image = UIImage(named: elements[myIndex])
+
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return pins.count
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "plandetailcell", for: indexPath) as! PlanDetailCollectionViewCell
+        
+        cell.mypin = pins[indexPath.row]
+        
+        return cell
+    }
 }
