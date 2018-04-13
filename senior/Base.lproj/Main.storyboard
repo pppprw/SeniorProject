@@ -1188,6 +1188,7 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Next  &gt;"/>
                                                 <connections>
+                                                    <action selector="uploadImage" destination="sjI-VB-YfS" eventType="touchUpInside" id="kLf-DW-IVq"/>
                                                     <segue destination="eZC-uz-dbE" kind="show" id="2oZ-Kq-aJG"/>
                                                 </connections>
                                             </button>
@@ -2184,7 +2185,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="value" red="0.41899347889999999" green="0.58639013819999997" blue="0.69053378809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
                                                         <color key="value" red="0.62838155029999998" green="0.8391324282" blue="0.88585895299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2193,7 +2194,7 @@
                                                         <color key="value" red="0.92770463197969544" green="0.38698001472053611" blue="0.18293954135471877" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
-                                                        <color key="value" red="0.62838155029999998" green="0.8391324282" blue="0.88585895299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.41899347887531435" green="0.58639013819385488" blue="0.69053378807106602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>

@@ -20,9 +20,9 @@ class CreateNewTripViewController: UIViewController, FSCalendarDataSource, FSCal
         super.viewDidLoad()
     }
 
- 
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print(date)
+    //let dateFormatter = 
+    func calendar(_ calendar: FSCalendar, didSelect date: Date) {
+        print("\(date) is clicked")
     }
     
 

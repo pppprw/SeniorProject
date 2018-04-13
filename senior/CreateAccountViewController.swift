@@ -89,7 +89,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                 let uid = user?.uid as! String
                 if let u = user{
-                    self.ref.child("Users").child(uid).setValue(["Username": username,"FullName": name,"Email": email])
+                    self.ref.child("Users").child(uid).child("Information").setValue(["Username": username,"FullName": name,"Email": email])
                     self.dismiss(animated: true, completion: nil)
                     print("user created :\(uid)")
                 }else {

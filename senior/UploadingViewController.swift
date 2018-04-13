@@ -10,7 +10,7 @@
 
 import UIKit
 import Foundation
-
+import FirebaseStorage
 
 /////////////////////////////////////
 
@@ -57,37 +57,42 @@ extension UploadingViewController: MapViewControllerDelegate {
 
 class UploadingViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
-    
     @IBOutlet weak var label: UILabel!
-    
     @IBOutlet weak var imageView: UIImageView!
-    
+    @IBOutlet weak var ImportImageButton: UIButton!
+    @IBOutlet weak var addLocationButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var descriptionTextView: UITextView!
     @IBAction func ImportImage(_ sender: AnyObject) {
-        
-        let controller = UIImagePickerController()
-        
-        controller.delegate = self
-        
-        controller.sourceType = .photoLibrary
-        self.present(controller, animated: true){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = .photoLibrary
+        self.present(picker, animated: true){
             // after it is completed
-  
+        }
+    }
+    @IBAction func uploadImage(){
+        let name:String = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child("Dummy").child("\(name).png")
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        if let uploadData = UIImagePNGRepresentation(imageView.image!){
+            storageRef.putData(uploadData, metadata: metadata ) { (metadata, error) in
+                if error != nil{
+                    print(error?.localizedDescription)
+                    return
+                }
+                let url = metadata?.downloadURL()
+                print(url)
+            }
         }
         
     }
     
-    @IBOutlet weak var ImportImageButton: UIButton!
-    
-    @IBOutlet weak var addLocationButton: UIButton!
-    
-    @IBOutlet weak var nextButton: UIButton!
-    
-    @IBOutlet weak var descriptionTextView: UITextView!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
         ImportImageButton.layer.masksToBounds = true
         ImportImageButton.layer.cornerRadius = 30
 
@@ -106,7 +111,13 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        var selectedImage: UIImage!
+        
+        if let selected = info[UIImagePickerControllerEditedImage] as? UIImage{
+            selectedImage = selected
+        } else if let selected = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            selectedImage = selected
+        }
         imageView.image = selectedImage
         self.dismiss(animated: true, completion:  nil)
         
