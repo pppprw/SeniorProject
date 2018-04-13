@@ -18,7 +18,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var createNewPlanView: UIView!
 
     @IBAction func createNewPlan(_ sender: Any) {
-        createNewPlanView.isHidden = false
+        performSegue(withIdentifier: "gogogo", sender: self)
     }
     
 
