@@ -1190,6 +1190,7 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Next  &gt;"/>
                                                 <connections>
+                                                    <action selector="uploadImage" destination="sjI-VB-YfS" eventType="touchUpInside" id="kLf-DW-IVq"/>
                                                     <segue destination="eZC-uz-dbE" kind="show" id="2oZ-Kq-aJG"/>
                                                 </connections>
                                             </button>
