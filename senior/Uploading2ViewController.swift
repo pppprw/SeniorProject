@@ -361,7 +361,7 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
         let fee = admissionFee.text!
         let count = self.list.count-1
         let newTrip =  self.NewtripTextField.text as! String
-        let dummy = "dummyID" + String(arc4random_uniform(1000))
+        let dummy = "dummyPostID" + String(arc4random_uniform(1000))
         if fee != ""{
             ref.child("Posts").child(pID).updateChildValues(["fee": fee])
         }

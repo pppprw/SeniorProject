@@ -31,7 +31,11 @@ class PlanDetailCollectionViewCell: UICollectionViewCell {
         planDetailUsername.text = mypin.name
         planDetailImage.image = mypin.img
     }
+    override func awakeFromNib() {
+        super.awakeFromNib()
 
+        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+    }
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layer.borderWidth = 0.5

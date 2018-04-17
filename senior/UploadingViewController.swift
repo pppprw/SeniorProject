@@ -109,7 +109,15 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
         descriptionTextView.text = "Write a description"
         descriptionTextView.textColor = UIColor.lightGray
         descriptionTextView.selectedTextRange = descriptionTextView.textRange(from: descriptionTextView.beginningOfDocument, to: descriptionTextView.beginningOfDocument)
-        
+    }
+    
+    // Alert method
+    func callAlert(title:String, message:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -147,8 +155,15 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
                     let user = Auth.auth().currentUser?.uid as! String
                     let location = self.label.text
                     let description = self.descriptionTextView.text
-                    
-                    self.ref.child("Posts").child(pID).setValue(["uid": user, "urlPost": url, "location": location, "caption": description ])
+                    if location == "Location"{
+                        self.callAlert(title: "Alert!", message: "Please choose a location.")
+                        return
+                    }
+                    if description == "Write a description"{
+                        self.ref.child("Posts").child(pID).setValue(["uid": user, "urlPost": url, "location": location])
+                    }else{
+                        self.ref.child("Posts").child(pID).setValue(["uid": user, "urlPost": url, "location": location, "caption": description ])
+                    }
                     self.performSegue(withIdentifier: "uploadCont", sender: self)
                     print(pID)
                     print(user)
