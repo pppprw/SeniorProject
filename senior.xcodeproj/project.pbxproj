@@ -11,6 +11,7 @@
 		180CFAEF2042985800DCFC75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180CFAEE2042985800DCFC75 /* LaunchScreen.storyboard */; };
 		181508FC207CEADD00C27862 /* TripNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181508FB207CEADD00C27862 /* TripNameCollectionViewCell.swift */; };
 		1821A666205BC8A40021C69F /* destViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1821A665205BC8A40021C69F /* destViewController.swift */; };
+		182A75E02085298200DD1485 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A75DF2085298200DD1485 /* EditProfileViewController.swift */; };
 		18358AC9203A821C005796B7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358AC8203A821C005796B7 /* SecondViewController.swift */; };
 		18358ACB203AB2C8005796B7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358ACA203AB2C8005796B7 /* CollectionViewCell.swift */; };
 		18358ACD203ACF89005796B7 /* destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18358ACC203ACF89005796B7 /* destination.swift */; };
@@ -72,6 +73,7 @@
 		180CFAEE2042985800DCFC75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		181508FB207CEADD00C27862 /* TripNameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNameCollectionViewCell.swift; sourceTree = "<group>"; };
 		1821A665205BC8A40021C69F /* destViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destViewController.swift; sourceTree = "<group>"; };
+		182A75DF2085298200DD1485 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		18358AC8203A821C005796B7 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		18358ACA203AB2C8005796B7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		18358ACC203ACF89005796B7 /* destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = destination.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				1892A04320640A3F003AB320 /* ProfileViewController.swift */,
+				182A75DF2085298200DD1485 /* EditProfileViewController.swift */,
 				1892A0452064BAFC003AB320 /* ButtonCollectionViewCell.swift */,
 				1892A04A2064DB5D003AB320 /* profiledestination.swift */,
 				1892A0482064DA24003AB320 /* DestinationInProfileCollectionViewCell.swift */,
@@ -490,6 +493,7 @@
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/MHPinterestLayout/MHPinterestLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftCommonUtils/SwiftCommonUtils.framework",
@@ -502,6 +506,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MHPinterestLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCommonUtils.framework",
@@ -565,6 +570,7 @@
 				18D246DC2033093E0098C050 /* ViewController.swift in Sources */,
 				18E88421205508D400EA0550 /* CustomTableViewCell.swift in Sources */,
 				18866BDC2080FB850072187F /* PlanDetailCollectionViewCell.swift in Sources */,
+				182A75E02085298200DD1485 /* EditProfileViewController.swift in Sources */,
 				1892A0542066840A003AB320 /* top5CollectionViewCell.swift in Sources */,
 				18E77E20204EA10A005CC976 /* PinCollectionViewCell.swift in Sources */,
 				189F836820775FBC0075CEC0 /* Uploading2ViewController.swift in Sources */,

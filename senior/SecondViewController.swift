@@ -31,6 +31,8 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         layout.footerHeight = 10
         self.collectionView.collectionViewLayout = layout
         
+        navigationItem.hidesBackButton = true;
+        
         //////////////   TITLE   //////////////
         if let nameToDisplay = name2{
             print(nameToDisplay)
@@ -58,6 +60,7 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let desVC = mainStoryboard.instantiateViewController(withIdentifier: "destViewController") as! destViewController
+        ////destination image////
         desVC.image = destinations[indexPath.row].img
         self.navigationController?.pushViewController(desVC, animated: true)
     }
