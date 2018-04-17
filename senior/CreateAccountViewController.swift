@@ -17,7 +17,6 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var RegisterUsername: UITextField!
     @IBOutlet weak var RegisterPassword: UITextField!
     @IBOutlet weak var RegisterConfirmPassword: UITextField!
-    
     @IBOutlet weak var SignupButton: UIButton!
     var ref: DatabaseReference!
     var databaseHandle: DatabaseHandle!
@@ -38,6 +37,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //Put keyboard out
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -98,7 +98,6 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
     /*
      // MARK: - Navigation
      
@@ -108,5 +107,4 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
      // Pass the selected object to the new view controller.
      }
      */
-    
 }

@@ -13,16 +13,15 @@ import SwiftCommonUtils
 typealias Dimension = (captionHeight:CGFloat, attachmentHeight:CGFloat)
 
 
-class SecondViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MHPinterestLayoutDelegate {
+class SecondViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MHPinterestLayoutDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var destinations = destination.createList()
     var layout = MHPinterestLayout()
-    
     var name2:String?
     var name3:String?
     @IBOutlet weak var navigationTitle: UINavigationItem!
-    
+    @IBOutlet weak var homeSearchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +30,10 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         layout.footerHeight = 10
         self.collectionView.collectionViewLayout = layout
         
+        //homeSearchBar.showsCancelButton = true
+        homeSearchBar.delegate = self
+        
+        
         //////////////   TITLE   //////////////
         if let nameToDisplay = name2{
             print(nameToDisplay)
@@ -38,20 +41,41 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        // Do some search stuff
+    }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.showsCancelButton = true
+        return true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.homeSearchBar.endEditing(true)
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.homeSearchBar.endEditing(true)
+        searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return destinations.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         cell.mydestination = destinations[indexPath.row]
-        
-        
         return cell
     }
     

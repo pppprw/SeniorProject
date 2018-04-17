@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 var destinations = destination.createList()
 
 class destViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -21,25 +20,21 @@ class destViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var destImage: UIImageView!
     @IBOutlet weak var exploreButton: UIButton!
     @IBOutlet weak var myTableView: UITableView!
-    
-    
     //for comment
     @IBOutlet weak var input: UITextField!
-   
     @IBAction func addComment(_ sender: AnyObject) {
             comment.append(input.text!)
     }
-   
-    
+    @IBAction func searchButton(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     var image = UIImage()
-    
     // TRONE NEEEE CLICKABLE LABEL AT DESTVIEWCONTROLLER NA JA ( USERNAME, NAMEOFDEST, LOCATION )
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var NameOfDestination: UILabel!
     @IBOutlet weak var usernameLabelelelel: UILabel!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         destImage.layer.masksToBounds = true
         destImage.layer.cornerRadius = 10
@@ -61,16 +56,18 @@ class destViewController: UIViewController, UITableViewDelegate, UITableViewData
         let usertap = UITapGestureRecognizer(target: self, action: #selector(destViewController.usertapFunction))
         usernameLabelelelel.isUserInteractionEnabled = true
         usernameLabelelelel.addGestureRecognizer(usertap)
-        
     }
+    
     @objc func locationtapFunction(sender:UITapGestureRecognizer) {
         print("location working")
         performSegue(withIdentifier: "location", sender: UILabel.self)
     }
+    
     @objc func desttapFunction(sender:UITapGestureRecognizer) {
         print("dest working")
     
     }
+    
     @objc func usertapFunction(sender:UITapGestureRecognizer) {
         print("user working")
         performSegue(withIdentifier: "userprofilesegue", sender: UILabel.self)

@@ -11,6 +11,8 @@
 import UIKit
 import Foundation
 import FirebaseStorage
+import FirebaseDatabase
+import FirebaseAuth
 
 /////////////////////////////////////
 
@@ -38,8 +40,6 @@ extension UIView {
     
 }
 
-
-
 /////////////////////////// START HERE ////////////////////////////////
 
 
@@ -63,6 +63,8 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var addLocationButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var descriptionTextView: UITextView!
+    /////////// POST ID KONG JUUBBYYYY ///////////////
+    @IBOutlet weak var postID: UITextField!
     @IBAction func ImportImage(_ sender: AnyObject) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -72,22 +74,18 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
             // after it is completed
         }
     }
-    @IBAction func uploadImage(){
-        let name:String = NSUUID().uuidString
-        let storageRef = Storage.storage().reference().child("Dummy").child("\(name).png")
-        let metadata = StorageMetadata()
-        metadata.contentType = "image/jpeg"
-        if let uploadData = UIImagePNGRepresentation(imageView.image!){
-            storageRef.putData(uploadData, metadata: metadata ) { (metadata, error) in
-                if error != nil{
-                    print(error?.localizedDescription)
-                    return
-                }
-                let url = metadata?.downloadURL()
-                print(url)
+    var ref: DatabaseReference!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "uploadCont" {
+            if let contDestination = segue.destination as? Uploading2ViewController{
+                contDestination.postID2 = postID.text!
             }
         }
-        
+        if segue.identifier == "map" {
+            let mapController = segue.destination as! MapViewController
+            mapController.delegate = self
+        }
     }
     
     override func viewDidLoad() {
@@ -101,10 +99,51 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
         nextButton.layer.masksToBounds = true
         nextButton.layer.cornerRadius = 7
         
+        ref = Database.database().reference()
         //self.getDestination("")
         
     }
   
+    //Put keyboard out
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func uploadPost1(){
+        let name:String = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child("Dummy").child("\(name).png")
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        if let uploadData = UIImagePNGRepresentation(imageView.image!){
+            storageRef.putData(uploadData, metadata: metadata ) { (metadata, error) in
+                if error != nil{
+                    print(error?.localizedDescription)
+                    return
+                }else{
+                    let pID = "Post" + String(arc4random_uniform(1000000))
+                    self.postID.text = pID
+                    let url = metadata?.downloadURL()?.absoluteString
+                    let user = Auth.auth().currentUser?.uid as! String
+                    let location = self.label.text
+                    let description = self.descriptionTextView.text
+                    
+                    self.ref.child("Posts").child(pID).setValue(["uid": user, "urlPost": url, "location": location, "caption": description ])
+                    self.performSegue(withIdentifier: "uploadCont", sender: self)
+                    print(pID)
+                    print(user)
+                    print(location)
+                    print(description)
+                    print(url)
+                }
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextView) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
         
@@ -121,13 +160,6 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
         imageView.image = selectedImage
         self.dismiss(animated: true, completion:  nil)
         
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "map" {
-            let mapController = segue.destination as! MapViewController
-            mapController.delegate = self
-        }
     }
 }
 
