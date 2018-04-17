@@ -22,9 +22,9 @@ class pin{
     
     static func createList()->[pin]{
         return [
-            pin(title: "AJ Hackett", img:UIImage (named:"13:1 AJ Hackett at Sentosa")!, name:"bf"),
-            pin(title: "Koreaaa", img:UIImage (named:"korea")!, name:"prw"),
-            pin(title: "Singapore", img:UIImage (named:"singapore")!, name:"prw"),
+            pin(title: "Robson St.", img:UIImage (named:"canada")!, name:"prw"),
+            pin(title: "D museum", img:UIImage (named:"korea")!, name:"prw"),
+            pin(title: "Haji Alley", img:UIImage (named:"singapore")!, name:"prw"),
         ]
     }
 }

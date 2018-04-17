@@ -1,18 +1,6 @@
-//
-//  secondPlanViewController.swift
-//  senior
-//
-//  Created by \ \ ' on 15/3/2561 BE.
-//  Copyright © 2561 Apple. All rights reserved.
-//
+
 import UIKit
 
-////////////Normallllll////////////
-//import MHPinterestLayout
-//import SwiftCommonUtils
-//import IGListKit
-
-//typealias Dimension5 = (captionHeight3:CGFloat, attachmentHeight3:CGFloat)
 
 class secondPlanViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -31,16 +19,13 @@ class secondPlanViewController: UIViewController, UICollectionViewDelegate, UICo
         desLabel.text = elementsName[myIndex]
         planDetailCollectionView.delegate = self
         planDetailCollectionView.dataSource = self
-//
-//        layout5.delegate = self
-//        layout5.headerHeight = 10
-//        layout5.footerHeight = 10
-//        self.planDetailCollectionView.collectionViewLayout = layout5
-        
+
     }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pins.count
+        //return pins.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
