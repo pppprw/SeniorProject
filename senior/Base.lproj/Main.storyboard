@@ -493,7 +493,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-cV-aTz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="801"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhb-4B-TAo">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
@@ -581,9 +581,6 @@
                                                 <state key="normal" image="settings">
                                                     <color key="titleColor" red="0.59573892510000004" green="0.79997025870000005" blue="0.84980165159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="Ast-OQ-9Iq" kind="show" id="1Yd-ce-WGc"/>
-                                                </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AQ9-Bp-DHD">
                                                 <rect key="frame" x="116" y="299" width="259" height="40"/>
