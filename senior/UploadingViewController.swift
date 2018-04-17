@@ -55,7 +55,7 @@ extension UploadingViewController: MapViewControllerDelegate {
 
 }
 
-class UploadingViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+class UploadingViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate{
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -102,6 +102,27 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
         ref = Database.database().reference()
         //self.getDestination("")
         
+        descriptionTextView.delegate = self
+        descriptionTextView.layer.masksToBounds = true
+        descriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
+        descriptionTextView.layer.borderWidth = 1
+        descriptionTextView.text = "Write a description"
+        descriptionTextView.textColor = UIColor.lightGray
+        descriptionTextView.selectedTextRange = descriptionTextView.textRange(from: descriptionTextView.beginningOfDocument, to: descriptionTextView.beginningOfDocument)
+        
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if descriptionTextView.textColor == UIColor.lightGray {
+            descriptionTextView.text = nil
+            descriptionTextView.textColor = UIColor.black
+        }
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if descriptionTextView.text.isEmpty {
+            descriptionTextView.text = "Write a description"
+            descriptionTextView.textColor = UIColor.lightGray
+        }
     }
   
     //Put keyboard out
