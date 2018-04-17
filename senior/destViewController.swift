@@ -63,6 +63,8 @@ class destViewController: UIViewController, UITableViewDelegate, UITableViewData
         usernameLabelelelel.addGestureRecognizer(usertap)
         
     }
+    
+    ////////////////// FUNCTION BAB TAPGESTURE
     @objc func locationtapFunction(sender:UITapGestureRecognizer) {
         print("location working")
         performSegue(withIdentifier: "location", sender: UILabel.self)
@@ -90,6 +92,8 @@ class destViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    /////// ADDITIONALLLLL FOR RESIZE IMAGE
+    
     func resizeImage(_ image: UIImage?, newWidth: CGFloat) -> UIImage? {
         guard let image = image else {
             return nil
@@ -108,11 +112,13 @@ class destViewController: UIViewController, UITableViewDelegate, UITableViewData
         return newImage
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func ExplorethistripAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "explorethistrip", sender: UIButton.self)
     }
     
+    ////////// TABLE VIEW KUE PUAK COMMMENTTTT NA DERRRRRR
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comment.count
     }
