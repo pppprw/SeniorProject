@@ -33,7 +33,6 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         //homeSearchBar.showsCancelButton = true
         homeSearchBar.delegate = self
         
-        
         //////////////   TITLE   //////////////
         if let nameToDisplay = name2{
             print(nameToDisplay)
