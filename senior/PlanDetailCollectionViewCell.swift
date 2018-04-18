@@ -8,6 +8,8 @@
 
 import UIKit
 
+///// AOW NE PAIII !!!!!!!!!!!!!!!!!
+
 class PlanDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var planDetailImage: UIImageView!
     @IBOutlet weak var planDetailUsername: UILabel!
