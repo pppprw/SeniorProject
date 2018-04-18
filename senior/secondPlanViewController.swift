@@ -5,6 +5,7 @@ import UIKit
 class secondPlanViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     /////DEAW MA CHANGEEE
+    ///////// MA LEAWWW 18 APR 3PM
     var pins = pin.createList()
 
     @IBOutlet weak var titleLabel: UILabel!
