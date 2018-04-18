@@ -24,6 +24,11 @@ class CreateNewTripViewController: UIViewController, FSCalendarDataSource, FSCal
         submitStyle.layer.cornerRadius = 7
     }
 
+    //Put keyboard out
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func getDateAsStringInUTC(date: NSDate) -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM dd yyyy"
