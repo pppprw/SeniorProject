@@ -104,8 +104,9 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
         
         descriptionTextView.delegate = self
         descriptionTextView.layer.masksToBounds = true
+        descriptionTextView.layer.cornerRadius = 7
         descriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
-        descriptionTextView.layer.borderWidth = 1
+        descriptionTextView.layer.borderWidth = 0.5
         descriptionTextView.text = "Write a description"
         descriptionTextView.textColor = UIColor.lightGray
         descriptionTextView.selectedTextRange = descriptionTextView.textRange(from: descriptionTextView.beginningOfDocument, to: descriptionTextView.beginningOfDocument)
