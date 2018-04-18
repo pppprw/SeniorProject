@@ -100,7 +100,7 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
         nextButton.layer.cornerRadius = 7
         
         ref = Database.database().reference()
-        //self.getDestination("")
+        self.getDestination("")
         
         descriptionTextView.delegate = self
         descriptionTextView.layer.masksToBounds = true
@@ -120,7 +120,6 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
         }))
         self.present(alert, animated: true, completion: nil)
     }
-    
     func textViewDidBeginEditing(_ textView: UITextView) {
         if descriptionTextView.textColor == UIColor.lightGray {
             descriptionTextView.text = nil
@@ -133,7 +132,7 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
             descriptionTextView.textColor = UIColor.lightGray
         }
     }
-  
+
     //Put keyboard out
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
