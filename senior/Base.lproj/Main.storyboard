@@ -1435,7 +1435,6 @@
                     <connections>
                         <outlet property="ImportImageButton" destination="PDR-ai-yj9" id="Ca9-zh-EHy"/>
                         <outlet property="addLocationButton" destination="SHW-Jn-fbY" id="CdE-9E-oGf"/>
-                        <outlet property="descriptionTextView" destination="R3H-xT-BHu" id="lNs-uw-ivd"/>
                         <outlet property="imageView" destination="b9z-ST-so6" id="tvV-Ru-AI8"/>
                         <outlet property="label" destination="6gf-lA-tVk" id="6hA-CX-UpE"/>
                         <outlet property="nextButton" destination="jDL-9T-TaB" id="eey-XR-I5v"/>
