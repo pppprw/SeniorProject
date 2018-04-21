@@ -472,11 +472,15 @@
                         <outlet property="hotcollectionView" destination="zTI-sT-hYV" id="DaL-2T-qvz"/>
                         <outlet property="searchBar" destination="gch-63-cI1" id="S5e-Qn-Hul"/>
                         <outlet property="top5collectionView" destination="OmH-TZ-WG4" id="gSO-in-weg"/>
+                        <segue destination="tW8-Kg-D2d" kind="show" identifier="yayoisegue" id="W1O-Gd-gsZ"/>
+                        <segue destination="UXw-yO-xpU" kind="show" identifier="dsegue" id="1gz-Ch-3BC"/>
+                        <segue destination="kpD-3z-4eq" kind="show" identifier="suntursegue" id="Wh4-J1-e5B"/>
+                        <segue destination="n5H-P7-Aet" kind="show" identifier="top5segue" id="V5g-1L-axq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l82-f9-2Yy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2829.5999999999999" y="-81.409295352323838"/>
+            <point key="canvasLocation" x="3225" y="-213"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="5wg-G2-4JI">
@@ -1509,7 +1513,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDB-MR-Upr">
-                                                <rect key="frame" x="88.5" y="375" width="68" height="18"/>
+                                                <rect key="frame" x="88.5" y="375" width="120" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="Dcg-0P-xp8"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1575,7 +1582,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Opening time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wQ-VL-1zt">
-                                                <rect key="frame" x="15" y="576" width="172" height="18"/>
+                                                <rect key="frame" x="15" y="576" width="96" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1662,10 +1669,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iW7-aS-shE">
-                                                <rect key="frame" x="254" y="428" width="99" height="37"/>
+                                                <rect key="frame" x="259" y="428" width="99" height="37"/>
                                                 <color key="backgroundColor" red="0.83921568627450982" green="0.13725490196078433" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="99" id="HWD-gH-E8j"/>
+                                                    <constraint firstAttribute="height" constant="37" id="lcX-hG-aRF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <inset key="titleEdgeInsets" minX="-43" minY="-1" maxX="0.0" maxY="0.0"/>
@@ -1675,11 +1683,10 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="iW7-aS-shE" secondAttribute="trailing" constant="22" id="0Fx-mU-r6d"/>
                                             <constraint firstItem="APu-yV-u7L" firstAttribute="top" secondItem="rUr-V6-FLI" secondAttribute="bottom" id="1ma-2r-ccq"/>
                                             <constraint firstItem="zq1-eZ-x9c" firstAttribute="leading" secondItem="APu-yV-u7L" secondAttribute="leading" id="9cD-Zq-8Vp"/>
                                             <constraint firstItem="I8H-Pb-mMK" firstAttribute="top" secondItem="zq1-eZ-x9c" secondAttribute="bottom" constant="15" id="Afn-5o-K19"/>
-                                            <constraint firstItem="rUr-V6-FLI" firstAttribute="top" secondItem="HjF-Ta-bc0" secondAttribute="bottom" constant="15" id="C4m-lH-bQC"/>
+                                            <constraint firstItem="rUr-V6-FLI" firstAttribute="top" secondItem="HjF-Ta-bc0" secondAttribute="bottom" constant="14" id="C4m-lH-bQC"/>
                                             <constraint firstItem="HjF-Ta-bc0" firstAttribute="leading" secondItem="ueO-Ke-YCn" secondAttribute="leading" constant="15" id="DDM-1s-SCC"/>
                                             <constraint firstItem="I8H-Pb-mMK" firstAttribute="leading" secondItem="ueO-Ke-YCn" secondAttribute="leading" constant="180" id="H4d-re-1HL"/>
                                             <constraint firstItem="tYj-fm-2A9" firstAttribute="top" secondItem="HaX-Np-qtY" secondAttribute="bottom" constant="56" id="Hte-Mp-Hbg"/>
@@ -1692,9 +1699,9 @@
                                             <constraint firstItem="HaX-Np-qtY" firstAttribute="leading" secondItem="ueO-Ke-YCn" secondAttribute="leading" constant="15" id="Rfq-Pt-yAt"/>
                                             <constraint firstItem="APu-yV-u7L" firstAttribute="leading" secondItem="ueO-Ke-YCn" secondAttribute="leading" constant="15" id="Rl5-0b-kvZ"/>
                                             <constraint firstAttribute="height" constant="1200" id="Vz4-Yw-jCl"/>
+                                            <constraint firstAttribute="trailing" secondItem="iW7-aS-shE" secondAttribute="trailing" constant="17" id="WQh-Gq-0k3"/>
                                             <constraint firstItem="gDB-MR-Upr" firstAttribute="top" secondItem="5Hv-hn-q1B" secondAttribute="bottom" constant="15" id="X2t-DG-aUc"/>
                                             <constraint firstAttribute="trailing" secondItem="Jg2-iJ-TGm" secondAttribute="trailing" constant="17" id="XnV-2M-xdM"/>
-                                            <constraint firstItem="iW7-aS-shE" firstAttribute="leading" secondItem="ueO-Ke-YCn" secondAttribute="leading" constant="254" id="Xs5-NE-IDZ"/>
                                             <constraint firstAttribute="trailing" secondItem="zq1-eZ-x9c" secondAttribute="trailing" constant="17" id="YVK-o2-gvm"/>
                                             <constraint firstItem="7VI-xN-L7G" firstAttribute="top" secondItem="zCW-ce-U5Z" secondAttribute="bottom" constant="20" id="Yxo-wg-Guj"/>
                                             <constraint firstItem="tYj-fm-2A9" firstAttribute="leading" secondItem="ueO-Ke-YCn" secondAttribute="leading" constant="15" id="ZPb-vk-Qcc"/>
@@ -1706,15 +1713,15 @@
                                             <constraint firstItem="zCW-ce-U5Z" firstAttribute="top" secondItem="I8H-Pb-mMK" secondAttribute="bottom" constant="6" id="dX6-c2-UOP"/>
                                             <constraint firstItem="7VI-xN-L7G" firstAttribute="leading" secondItem="ueO-Ke-YCn" secondAttribute="leading" constant="180" id="eOr-bt-K2h"/>
                                             <constraint firstItem="tYj-fm-2A9" firstAttribute="top" secondItem="J2d-nK-Ktm" secondAttribute="bottom" constant="8" id="fd7-lQ-EYM"/>
+                                            <constraint firstItem="gDB-MR-Upr" firstAttribute="leading" secondItem="ueO-Ke-YCn" secondAttribute="leading" constant="88.5" id="gCM-eO-vrQ"/>
+                                            <constraint firstItem="iW7-aS-shE" firstAttribute="top" secondItem="gDB-MR-Upr" secondAttribute="bottom" constant="15" id="gzg-wi-rQZ"/>
                                             <constraint firstItem="gDB-MR-Upr" firstAttribute="leading" secondItem="HjF-Ta-bc0" secondAttribute="trailing" constant="5" id="hvG-9Z-e5A"/>
                                             <constraint firstItem="5wQ-VL-1zt" firstAttribute="leading" secondItem="ueO-Ke-YCn" secondAttribute="leading" constant="15" id="iqm-wE-v4G"/>
                                             <constraint firstAttribute="trailing" secondItem="HaX-Np-qtY" secondAttribute="trailing" constant="15" id="jtO-Nj-xmw"/>
-                                            <constraint firstItem="I8H-Pb-mMK" firstAttribute="leading" secondItem="5wQ-VL-1zt" secondAttribute="trailing" constant="-7" id="k6I-Lq-9hQ"/>
                                             <constraint firstAttribute="trailing" secondItem="PdB-PD-4TT" secondAttribute="trailing" constant="17" id="l64-go-0Xw"/>
                                             <constraint firstItem="J2d-nK-Ktm" firstAttribute="top" secondItem="HaX-Np-qtY" secondAttribute="bottom" constant="24" id="nCT-TN-dmH"/>
-                                            <constraint firstItem="iW7-aS-shE" firstAttribute="top" secondItem="GdA-43-80d" secondAttribute="bottom" constant="62" id="oyn-Ab-0Lj"/>
                                             <constraint firstItem="BKE-7P-k8b" firstAttribute="top" secondItem="5wQ-VL-1zt" secondAttribute="bottom" constant="44" id="uWS-NV-31M"/>
-                                            <constraint firstItem="zq1-eZ-x9c" firstAttribute="top" secondItem="iW7-aS-shE" secondAttribute="bottom" constant="2" id="wNj-76-Fiz"/>
+                                            <constraint firstAttribute="trailing" secondItem="gDB-MR-Upr" secondAttribute="trailing" constant="166.5" id="wgT-fE-fny"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -2760,14 +2767,553 @@
             </objects>
             <point key="canvasLocation" x="4764" y="326"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="mJG-0C-fRI">
+            <objects>
+                <viewController id="tW8-Kg-D2d" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p9n-f7-RAs"/>
+                        <viewControllerLayoutGuide type="bottom" id="6IM-h6-4M5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zHi-ME-bKj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="had-FE-P4U">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2150"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjO-Mg-fYj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yayoi Exhibition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmN-UD-NnQ">
+                                                <rect key="frame" x="52" y="8" width="271" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="National Gallery Singapore, Singapore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fF-aK-TQq">
+                                                <rect key="frame" x="0.0" y="47" width="375" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date : Jun 9 2018 - Sep 3 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obd-mE-VL2">
+                                                <rect key="frame" x="0.0" y="73" width="375" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yayoi-kusama-cover-1280x705" translatesAutoresizingMaskIntoConstraints="NO" id="upk-B3-fju">
+                                                <rect key="frame" x="14" y="102" width="347" height="148"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ent" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-gw-2iA">
+                                                <rect key="frame" x="14" y="445" width="347" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1. THE SPIRITS OF THE PUMPKINS DESCENDED INTO THE HEAVENS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOU-iG-9pd">
+                                                <rect key="frame" x="14" y="385" width="347" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" red="0.41899347889999999" green="0.58639013819999997" blue="0.69053378809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Yayoi-Kusama-The-Art-of-Infinity-3" translatesAutoresizingMaskIntoConstraints="NO" id="pIQ-p3-49j">
+                                                <rect key="frame" x="14" y="653" width="347" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2. NARCISSUS GARDEN" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5A-5a-tOp">
+                                                <rect key="frame" x="14" y="1184" width="347" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" red="0.41899347889999999" green="0.58639013819999997" blue="0.69053378809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="S__86458401" translatesAutoresizingMaskIntoConstraints="NO" id="Euc-ch-kd9">
+                                                <rect key="frame" x="14" y="861" width="347" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="S__86458400" translatesAutoresizingMaskIntoConstraints="NO" id="nmh-Ly-3am">
+                                                <rect key="frame" x="14" y="1223" width="347" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqJ-rj-ROP">
+                                                <rect key="frame" x="14" y="1431" width="347" height="120"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">The shiny balls reflected multiple images of the viewer back at himself, in an echo of the legend of Narcissus, the proud, beautiful boy who was punished by the goddess Nemesis for his vanity. She lured him to a pool where he fell in love with his own reflection and pined to death. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFu-dX-hJx">
+                                                <rect key="frame" x="14" y="1069" width="347" height="107"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">This work marries three of her recurring themes: pumpkins and polka dots, in an infinity room. The yellow-and-black dotted room has a mirrored cube in the middle and when you peer in, glowing pumpkins stretch into mirrored infinity. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3. INFINITY MIRRORED ROOM - GLEAMING LIGHTS OF THE SOULS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIB-fy-g9K">
+                                                <rect key="frame" x="14" y="1559" width="323" height="47"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" red="0.41899347889999999" green="0.58639013819999997" blue="0.69053378809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="S__86458399" translatesAutoresizingMaskIntoConstraints="NO" id="Uds-UX-HAq">
+                                                <rect key="frame" x="14" y="1614" width="347" height="221"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pc-I2-3Tq">
+                                                <rect key="frame" x="14" y="1843" width="347" height="193"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">This room was completely, blindingly pitch black and had strings of red Christmas lights that pulsed and faded to a heartbeat rhythm. Over the years, the infinity rooms have become merely dim, with visible pathways through the space and LED lights that twinkle, dim and even change colours. 
+
+The incarnation at the National Gallery is pretty and Instagrammy rather than chilling and disorienting like the early version. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af9-Ai-Cn7">
+                                                <rect key="frame" x="211" y="2050" width="150" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Writer :">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFontEmphasized"/>
+                                                            <font key="NSOriginalFont" size="17" name=".AppleSystemUIFontEmphasized"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" Alex Turner">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Admission fee  :   SGD 37.45 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvZ-FS-jgd">
+                                                <rect key="frame" x="14" y="258" width="329" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opening hours :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJZ-gn-tyk">
+                                                <rect key="frame" x="14" y="284" width="122" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sat - Thurs : 10.00 - 19.00 " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fp-c1-ZVY">
+                                                <rect key="frame" x="148" y="284" width="200" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDX-ho-xKa">
+                                                <rect key="frame" x="14" y="313" width="347" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="If you missed the show, here were the ">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="15"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="highlights">
+                                                        <attributes>
+                                                            <font key="NSFont" size="15" name=".AppleSystemUIFontEmphasized"/>
+                                                            <font key="NSOriginalFont" size="15" name=".AppleSystemUIFontEmphasized"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" of the exhibition which featured more than 120 of the 88-year-old Japanese artist's works. ">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="15"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2100" id="4gT-5V-S3x"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.60392156860000001" green="0.80000000000000004" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MjO-Mg-fYj" secondAttribute="trailing" id="1RC-2y-gum"/>
+                                    <constraint firstItem="MjO-Mg-fYj" firstAttribute="leading" secondItem="had-FE-P4U" secondAttribute="leading" id="8rA-Rn-MJU"/>
+                                    <constraint firstAttribute="bottom" secondItem="MjO-Mg-fYj" secondAttribute="bottom" id="Y9B-PZ-hbz"/>
+                                    <constraint firstItem="MjO-Mg-fYj" firstAttribute="top" secondItem="had-FE-P4U" secondAttribute="top" id="art-dr-VTS"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="had-FE-P4U" firstAttribute="top" secondItem="zHi-ME-bKj" secondAttribute="top" id="GxZ-jA-bHQ"/>
+                            <constraint firstAttribute="trailing" secondItem="had-FE-P4U" secondAttribute="trailing" id="MXT-ad-pP6"/>
+                            <constraint firstItem="6IM-h6-4M5" firstAttribute="top" secondItem="had-FE-P4U" secondAttribute="bottom" id="XNT-Ho-5Hq"/>
+                            <constraint firstItem="MjO-Mg-fYj" firstAttribute="width" secondItem="zHi-ME-bKj" secondAttribute="width" id="i9B-13-AQN"/>
+                            <constraint firstItem="had-FE-P4U" firstAttribute="leading" secondItem="zHi-ME-bKj" secondAttribute="leading" id="vMg-Yw-w5j"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="375" height="2200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYP-hP-Ycn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6512.8000000000002" y="-293.25337331334333"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DV9-8Q-wFf">
+            <objects>
+                <viewController id="UXw-yO-xpU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mFX-RE-n2n"/>
+                        <viewControllerLayoutGuide type="bottom" id="QsH-1y-keM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y3S-KF-n23">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-82-yhH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2101"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbu-ky-lRS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2040"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="youth" translatesAutoresizingMaskIntoConstraints="NO" id="6oh-fR-d7A">
+                                                <rect key="frame" x="13" y="116" width="347" height="148"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Admission fee  :   ₩ 5,000 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJf-Zd-vEC">
+                                                <rect key="frame" x="13" y="272" width="329" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opening hours :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag5-mb-mok">
+                                                <rect key="frame" x="13" y="298" width="122" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tue - Sun : 10.00 - 18.00 Fri - Sat    : 10.00 - 20.00" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kme-H3-2Kx">
+                                                <rect key="frame" x="147" y="298" width="200" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recently I hopped back onto the contemporary art trail and here are my findings." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iip-ff-AFp">
+                                                <rect key="frame" x="13" y="350" width="347" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6XD-ot-Q8P">
+                                                <rect key="frame" x="14" y="612" width="347" height="112"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">The D Museum is close to Hangangjin station on line 6 which is the stop before Itaewon Station. However, you have to get out at exit 2 and take the bus 110B towards Oksu and get off at the Hannam-Sibum Apartments. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="P3117333" translatesAutoresizingMaskIntoConstraints="NO" id="DlJ-1G-NLg">
+                                                <rect key="frame" x="13" y="405" width="347" height="208"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="P3117389" translatesAutoresizingMaskIntoConstraints="NO" id="pA5-K6-TeY">
+                                                <rect key="frame" x="14" y="723" width="346" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYf-ay-Ww8">
+                                                <rect key="frame" x="14" y="1163" width="347" height="112"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">The exhibition itself is as modern as they come. It's predominantly a photography exhibition but includes videos, graphics and installations. Each floor is given a theme and the exhibition depicts varying youth culture. From American hip hop and skateboard culture to British kids in rebellion.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="P3117397" translatesAutoresizingMaskIntoConstraints="NO" id="iOJ-Jv-52v">
+                                                <rect key="frame" x="14" y="940" width="347" height="213"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="P3117408-1" translatesAutoresizingMaskIntoConstraints="NO" id="0ST-Sh-GZp">
+                                                <rect key="frame" x="14" y="1298" width="347" height="202"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="P3117521" translatesAutoresizingMaskIntoConstraints="NO" id="soW-CJ-yi4">
+                                                <rect key="frame" x="14" y="1682" width="347" height="227"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2t-iy-YNY">
+                                                <rect key="frame" x="14" y="1520" width="346" height="154"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Upon entering the exhibition one will find a darkly-lit hall—more like a jail cell—lined with images of stone-faced teens writhing to express repressed emotions. Some are angry, others bored; this, not in any significant location. The subjects are in their bedrooms, just woken up from a bad dream, or at the local bar heating up the scene with a little bit of hip hop.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlO-OP-4Lv">
+                                                <rect key="frame" x="14" y="1917" width="347" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">I can't recommend it highly enough. Start the dialogue today, go down the the D Museum in Hannam-dong to see it. Bring a friend.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbZ-bP-CZC">
+                                                <rect key="frame" x="194" y="1996" width="167" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Writer :">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFontEmphasized"/>
+                                                            <font key="NSOriginalFont" size="17" name=".AppleSystemUIFontEmphasized"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" Jakob Ogawa">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2040" id="JGW-kU-607"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Youth Exhibition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iC-wz-Gxe">
+                                        <rect key="frame" x="52" y="20" width="271" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="D museum, Seoul, Soth Korea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTi-Wd-2Zy">
+                                        <rect key="frame" x="0.0" y="59" width="375" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date : May 9 2018 - Oct 23 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVO-G7-f1s">
+                                        <rect key="frame" x="0.0" y="85" width="375" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="kbu-ky-lRS" secondAttribute="bottom" id="Fxp-AL-uWg"/>
+                                    <constraint firstItem="kbu-ky-lRS" firstAttribute="leading" secondItem="7tB-82-yhH" secondAttribute="leading" id="fwo-A1-1Me"/>
+                                    <constraint firstItem="kbu-ky-lRS" firstAttribute="top" secondItem="7tB-82-yhH" secondAttribute="top" id="lgp-22-NEp"/>
+                                    <constraint firstAttribute="trailing" secondItem="kbu-ky-lRS" secondAttribute="trailing" id="mJz-iF-Bp8"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7tB-82-yhH" firstAttribute="leading" secondItem="y3S-KF-n23" secondAttribute="leading" id="5i0-eu-ndU"/>
+                            <constraint firstItem="QsH-1y-keM" firstAttribute="top" secondItem="7tB-82-yhH" secondAttribute="bottom" id="BXF-qc-IfM"/>
+                            <constraint firstItem="7tB-82-yhH" firstAttribute="top" secondItem="y3S-KF-n23" secondAttribute="top" id="Y3f-uW-nNt"/>
+                            <constraint firstAttribute="trailing" secondItem="7tB-82-yhH" secondAttribute="trailing" id="igx-zT-TUR"/>
+                            <constraint firstItem="kbu-ky-lRS" firstAttribute="width" secondItem="y3S-KF-n23" secondAttribute="width" id="sfC-Rd-n9M"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="375" height="2150"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEZ-Uz-tMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7396" y="-112.44377811094454"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bQy-2H-WXy">
+            <objects>
+                <viewController id="kpD-3z-4eq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d7K-u5-3i9"/>
+                        <viewControllerLayoutGuide type="bottom" id="MtO-FX-pLy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rqy-n6-FTg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKW-07-RzQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1187"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiV-DB-eSt">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1187"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yelo House, Bangkok" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1x-TD-Qn5">
+                                                <rect key="frame" x="0.0" y="47" width="375" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date : Feb 28 2018 - Apr 8 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3t-3B-1hS">
+                                                <rect key="frame" x="0.0" y="73" width="375" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="S__86458385" translatesAutoresizingMaskIntoConstraints="NO" id="gs4-HR-y0j">
+                                                <rect key="frame" x="14" y="102" width="347" height="174"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Admission fee  :   Free " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-2s-aWW">
+                                                <rect key="frame" x="14" y="284" width="329" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opening hours :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdV-sY-5tm">
+                                                <rect key="frame" x="14" y="310" width="122" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wed - Sun 11:00-20:00" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag5-QY-pso">
+                                                <rect key="frame" x="148" y="310" width="200" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="S__86458386" translatesAutoresizingMaskIntoConstraints="NO" id="Col-qc-QK6">
+                                                <rect key="frame" x="14" y="430" width="347" height="193"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFG-MI-Tmp">
+                                                <rect key="frame" x="14" y="339" width="347" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">โค้งสุดท้ายของแฟนๆ ซันเต๋อ-ยศนันท์ วุฒิกรสมบัติกุล ที่จะได้ชมงานโซโลครั้งแรกในชีวิตของเขาที่ชื่อ ‘Zero Decibel Solo Exhibition by SUNTUR’ ที่เล่าเรื่องมุมมองหลากหลายที่ว่าด้วยความเงียบ</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQ4-bh-iau">
+                                                <rect key="frame" x="14" y="631" width="347" height="103"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">มาเริ่มกันเลยยที่ผลงานแรกที่เราชอบ "May I know your name?" คือผลงานที่สื่อออกมา ความหมายน่ารักมากๆ บวกกับสีที่เลือกใช้ โทนที่ดูอบอุ่น น่ารัก ถึงตัวละครในรูปจะเล็ก แต่ก็เป็นการดึงดูดความสนใจจากผู้ร่วมงานได้มากเลยทีเดียว</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="S__86458387" translatesAutoresizingMaskIntoConstraints="NO" id="8as-cR-HeW">
+                                                <rect key="frame" x="14" y="740" width="347" height="226"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPZ-zH-2vt">
+                                                <rect key="frame" x="14" y="974" width="347" height="149"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <mutableString key="text">งานถัดไปที่เราชอบมากๆคืองานนี้เลย "There is no ego when I'm with you" เป็นภาพของคนกับน้องหมา เราเชื่อว่าหลายๆคนที่เลี้ยงหมาคงต้องเคยพูดความในใจ เรื่องที่อัดอั้นตันใจกับน้องหมากันมาแล้วทั้งนั้น ซึ่งซันเต๋อสื่อความได้เข้าใจง่าย และออกมาน่ารักเช่นเคย ซึ่งเราประทับใจมากๆ เลยอยากให้ทุกคนลองเปิดใจดูผลงานจากศิลปินไทยคนนี้กัน สำหรับคนที่สนใจก็ลองไปเยี่ยมชมได้เลยที่ Yelo house BTS สนามกีฬา ;)</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0i-uE-571">
+                                                <rect key="frame" x="211" y="1140" width="150" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Writer :">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFontEmphasized"/>
+                                                            <font key="NSOriginalFont" size="17" name=".AppleSystemUIFontEmphasized"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" Alex Turner">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1187" id="ARh-SM-1VB"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ZERO DECIBEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jD1-f4-W8u">
+                                        <rect key="frame" x="52" y="8" width="271" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MiV-DB-eSt" secondAttribute="trailing" id="18g-mU-BCj"/>
+                                    <constraint firstAttribute="bottom" secondItem="MiV-DB-eSt" secondAttribute="bottom" id="9s3-Xc-dmn"/>
+                                    <constraint firstItem="MiV-DB-eSt" firstAttribute="leading" secondItem="hKW-07-RzQ" secondAttribute="leading" id="Jsj-ff-5AM"/>
+                                    <constraint firstItem="MiV-DB-eSt" firstAttribute="top" secondItem="hKW-07-RzQ" secondAttribute="top" id="n9t-KF-SHq"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MtO-FX-pLy" firstAttribute="top" secondItem="hKW-07-RzQ" secondAttribute="bottom" id="0uj-9c-mWw"/>
+                            <constraint firstItem="hKW-07-RzQ" firstAttribute="leading" secondItem="Rqy-n6-FTg" secondAttribute="leading" id="3VB-2Y-xKp"/>
+                            <constraint firstAttribute="trailing" secondItem="hKW-07-RzQ" secondAttribute="trailing" id="D1T-4M-Kor"/>
+                            <constraint firstItem="MiV-DB-eSt" firstAttribute="width" secondItem="Rqy-n6-FTg" secondAttribute="width" id="VVG-aH-spd"/>
+                            <constraint firstItem="hKW-07-RzQ" firstAttribute="top" secondItem="d7K-u5-3i9" secondAttribute="bottom" id="fn5-Bp-lGU"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="375" height="1300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F6a-x5-W7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6136.8000000000002" y="1400.5997001499252"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="P3117333" width="4608" height="3072"/>
+        <image name="P3117389" width="4608" height="3072"/>
+        <image name="P3117397" width="4608" height="3072"/>
         <image name="P3117408" width="347" height="140"/>
+        <image name="P3117408-1" width="4608" height="3072"/>
+        <image name="P3117521" width="4608" height="3072"/>
+        <image name="S__86458385" width="1472" height="980"/>
+        <image name="S__86458386" width="1478" height="1108"/>
+        <image name="S__86458387" width="1478" height="1108"/>
+        <image name="S__86458399" width="1478" height="1108"/>
+        <image name="S__86458400" width="1570" height="1042"/>
+        <image name="S__86458401" width="1478" height="1108"/>
+        <image name="Yayoi-Kusama-The-Art-of-Infinity-3" width="752" height="440"/>
         <image name="add" width="24" height="24"/>
         <image name="addphotoo" width="300" height="225"/>
         <image name="canada" width="2435" height="1469"/>
         <image name="edit" width="128" height="128"/>
         <image name="edit(1)" width="16" height="16"/>
+        <image name="ent" width="1570" height="1042"/>
         <image name="explore-tool" width="32" height="32"/>
         <image name="logo" width="30" height="30"/>
         <image name="logo2" width="1000" height="700"/>
@@ -2782,12 +3328,14 @@
         <image name="settings" width="64" height="64"/>
         <image name="signin" width="375" height="667"/>
         <image name="user" width="256" height="256"/>
+        <image name="yayoi-kusama-cover-1280x705" width="1280" height="705"/>
+        <image name="youth" width="2349" height="3039"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="o41-5G-T41"/>
         <segue reference="SGz-WS-tqP"/>
         <segue reference="Ren-qV-I7I"/>
-        <segue reference="MdW-Vu-2KB"/>
-        <segue reference="rHg-Qo-ijX"/>
+        <segue reference="MkR-zh-aCo"/>
+        <segue reference="V5g-1L-axq"/>
     </inferredMetricsTieBreakers>
 </document>

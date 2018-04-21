@@ -29,13 +29,27 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
     var databaseHandle: DatabaseHandle!
     var destinations:[destination] = []
     
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        
+        activityIndicator.startAnimating()
+        
             print("check second")
             destination.createList(completion: {desList in
                 self.destinations.removeAll()
                 self.destinations = desList
                 self.collectionView.reloadData()
+                
+                ////// loading
+                self.activityIndicator.stopAnimating()
             })
         layout.delegate = self
         layout.headerHeight = 10
