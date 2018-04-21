@@ -12,7 +12,7 @@ class tripCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var destination: UILabel!
     @IBOutlet weak var username: UILabel!
-    @IBOutlet weak var pinButton: UIButton!
+
     
     var myexploretrip: destination!{
         didSet{

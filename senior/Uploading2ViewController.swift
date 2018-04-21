@@ -57,6 +57,7 @@ class Uploading2ViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         pickerView1.dataSource = self
         pickerView1.delegate = self

@@ -20,7 +20,17 @@ public enum UIButtonBorderSide {
     case top, bottom, left, right
 }
 
-
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
 
 extension UIView {
     public func addBorder(side: UIButtonBorderSide, color: UIColor, width: CGFloat) {
@@ -64,6 +74,7 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var descriptionTextView: UITextView!
     /////////// POST ID KONG JUUBBYYYY ///////////////
+    @IBOutlet weak var desName: UITextField!
     @IBOutlet weak var postID: UITextField!
     @IBAction func ImportImage(_ sender: AnyObject) {
         let picker = UIImagePickerController()
@@ -90,6 +101,9 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        
+        label.text = "Location"
         
         ImportImageButton.layer.masksToBounds = true
         ImportImageButton.layer.cornerRadius = 30
@@ -110,6 +124,8 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
         descriptionTextView.text = "Write a description"
         descriptionTextView.textColor = UIColor.lightGray
         descriptionTextView.selectedTextRange = descriptionTextView.textRange(from: descriptionTextView.beginningOfDocument, to: descriptionTextView.beginningOfDocument)
+        
+       
     }
     
     // Alert method
@@ -120,6 +136,7 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
         }))
         self.present(alert, animated: true, completion: nil)
     }
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         if descriptionTextView.textColor == UIColor.lightGray {
             descriptionTextView.text = nil
@@ -131,16 +148,19 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
             descriptionTextView.text = "Write a description"
             descriptionTextView.textColor = UIColor.lightGray
         }
+        //self.view.endEditing(true)
     }
-
+    
     //Put keyboard out
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
     @IBAction func uploadPost1(){
-        let name:String = NSUUID().uuidString
-        let storageRef = Storage.storage().reference().child("Dummy").child("\(name).png")
+        let pID = "Post" + String(arc4random_uniform(1000000))
+        let user = Auth.auth().currentUser?.uid as! String
+        let url = "Posts/\(user)/\(pID).jpg" as! String
+        let storageRef = Storage.storage().reference().child("\(url)")
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpeg"
         if let uploadData = UIImagePNGRepresentation(imageView.image!){
@@ -149,26 +169,39 @@ class UploadingViewController: UIViewController, UINavigationControllerDelegate,
                     print(error?.localizedDescription)
                     return
                 }else{
-                    let pID = "Post" + String(arc4random_uniform(1000000))
                     self.postID.text = pID
-                    let url = metadata?.downloadURL()?.absoluteString
-                    let user = Auth.auth().currentUser?.uid as! String
                     let location = self.label.text
                     let description = self.descriptionTextView.text
-                    if location == "Location"{
+                    let destination = self.desName.text as! String
+                    if location == ""{
                         self.callAlert(title: "Alert!", message: "Please choose a location.")
                         return
                     }
-                    if description == "Write a description"{
-                        self.ref.child("Posts").child(pID).setValue(["uid": user, "urlPost": url, "location": location])
-                    }else{
-                        self.ref.child("Posts").child(pID).setValue(["uid": user, "urlPost": url, "location": location, "caption": description ])
+                    if destination == ""{
+                        self.callAlert(title: "Alert!", message: "Please fill in your destination.")
+                        return
                     }
-                    self.performSegue(withIdentifier: "uploadCont", sender: self)
+                    self.ref.child("Users").child(user).child("Information").observeSingleEvent(of: DataEventType.value, with: { (snapshot) in
+                        let data = snapshot.value as! [String:String]
+                        let username = data["Username"]
+                        
+                        if description == "Write a description"{
+                            self.ref.child("Posts").child(pID).setValue(["uid": user, "Username": username, "urlPost": url, "location": location, "destinationName": destination])
+                        }else{
+                            self.ref.child("Posts").child(pID).setValue(["uid": user, "Username": username, "urlPost": url, "location": location, "destinationName": destination, "caption": description])
+                        }
+                        self.performSegue(withIdentifier: "uploadCont", sender: self)
+                    }, withCancel: { (error) in
+                        if error != nil{
+                            print(error.localizedDescription)
+                            return
+                        }
+                    })
                     print(pID)
                     print(user)
                     print(location)
                     print(description)
+                    print(destination)
                     print(url)
                 }
             }

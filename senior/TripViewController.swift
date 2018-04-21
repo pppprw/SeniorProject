@@ -24,7 +24,9 @@ class TripViewController: UIViewController, UICollectionViewDataSource, UICollec
     var layout = MHPinterestLayout()
     
     //// INFORMATION THAT IS IMPLEMENTED TO THE TRIP PAGE
-    var destinations = destination.createList()
+    var destinations:[destination] = []
+    var name3:String? //รับชื่อusername
+    var name4:String? //รับชื่อtripนะจย้า
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +39,21 @@ class TripViewController: UIViewController, UICollectionViewDataSource, UICollec
         layout.delegate = self
         layout.headerHeight = 10
         layout.footerHeight = 10
+        destination.createList(completion: {desList in
+            self.destinations = desList
+            self.collectionView.reloadData()
+        })
         self.collectionView.collectionViewLayout = layout
+        
+        //พวกที่รับชื่อคน ชื่อทริปปปป
+        if let nameToDisplay = name3{
+            print(nameToDisplay)
+            self.username.text = "@"+nameToDisplay
+        }
+        if let nameToDisplay2 = name4{
+            print(nameToDisplay2)
+            self.tripname.text = nameToDisplay2
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{

@@ -49,7 +49,7 @@
 		18E88421205508D400EA0550 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E88420205508D400EA0550 /* CustomTableViewCell.swift */; };
 		18EC0C0B2068E028000B30A3 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC0C0A2068E028000B30A3 /* CommentTableViewCell.swift */; };
 		20937EDD0ABCC20941B03078 /* Pods_senior.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A4CF2BC77B29FDE90718ED /* Pods_senior.framework */; };
-		FA4B5B9E2078CC1800F48AAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA4B5B9D2078CC1800F48AAD /* GoogleService-Info.plist */; };
+		FA7B72AB2089671E009D6426 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7B72AA2089671E009D6426 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +120,7 @@
 		18EC0C0A2068E028000B30A3 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		26A4CF2BC77B29FDE90718ED /* Pods_senior.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_senior.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F18706232316184BD6901EF /* Pods-senior.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-senior.debug.xcconfig"; path = "Pods/Target Support Files/Pods-senior/Pods-senior.debug.xcconfig"; sourceTree = "<group>"; };
-		FA4B5B9D2078CC1800F48AAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA7B72AA2089671E009D6426 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,7 +255,7 @@
 		18D246CD2033093E0098C050 = {
 			isa = PBXGroup;
 			children = (
-				FA4B5B9D2078CC1800F48AAD /* GoogleService-Info.plist */,
+				FA7B72AA2089671E009D6426 /* GoogleService-Info.plist */,
 				18D246D82033093E0098C050 /* senior */,
 				18D246F02033093E0098C050 /* seniorTests */,
 				18D246FB2033093F0098C050 /* seniorUITests */,
@@ -466,8 +466,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				180CFAEF2042985800DCFC75 /* LaunchScreen.storyboard in Resources */,
+				FA7B72AB2089671E009D6426 /* GoogleService-Info.plist in Resources */,
 				184ABAA9207F10D5009729EC /* Assets 13-27-34-945 10-57-33-891.xcassets in Resources */,
-				FA4B5B9E2078CC1800F48AAD /* GoogleService-Info.plist in Resources */,
 				18D246DF2033093E0098C050 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,10 +496,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-senior/Pods-senior-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/MHPinterestLayout/MHPinterestLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftCommonUtils/SwiftCommonUtils.framework",
@@ -509,10 +510,11 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MHPinterestLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCommonUtils.framework",

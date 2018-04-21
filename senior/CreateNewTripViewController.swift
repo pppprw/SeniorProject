@@ -19,6 +19,7 @@ class CreateNewTripViewController: UIViewController, FSCalendarDataSource, FSCal
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         submitStyle.layer.masksToBounds = true
         submitStyle.layer.cornerRadius = 7

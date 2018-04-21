@@ -50,11 +50,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let password:String = SignInPassword.text!
         if email.isEmpty == false && password.isEmpty == false{
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                if let u = user{
-                    self.performSegue(withIdentifier: "tabBar", sender: self)
-                    print("User sign in: \(user?.uid)")
-                }else{
+                if error != nil{
                     print(error?.localizedDescription)
+                    self.callAlert(title: "Alert!", message: "Invalid email or password.")
+                }else{
+                    if let u = user{
+                        self.performSegue(withIdentifier: "tabBar", sender: self)
+                        print("User sign in: \(user?.uid)")
+                    }else{
+                        print(error?.localizedDescription)
+                    }
                 }
             }
 //            self.ref.child("Users/\(username)").observeSingleEvent(of: .value) { (snapshot) in

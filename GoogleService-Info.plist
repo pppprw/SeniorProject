@@ -7,34 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>445812744643-68km0u20jbvr2pbc9dann9fira6dd9gp.apps.googleusercontent.com</string>
+	<string>313950763281-fdqlhputrrqrl3vmge4bihpg2b7rh4eo.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.445812744643-68km0u20jbvr2pbc9dann9fira6dd9gp</string>
+	<string>com.googleusercontent.apps.313950763281-fdqlhputrrqrl3vmge4bihpg2b7rh4eo</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAyZahVk7WEz12uYQZg5-3t7ASVNTESums</string>
+	<string>AIzaSyC_NCC5px_3RSiI800J_lTL8NSV1JCowxI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>445812744643</string>
+	<string>313950763281</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>test.senior.wanderapp</string>
 	<key>PROJECT_ID</key>
-	<string>seniorprojectwander1</string>
+	<string>senior-wander-app</string>
 	<key>STORAGE_BUCKET</key>
-	<string>seniorprojectwander1.appspot.com</string>
+	<string>senior-wander-app.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:445812744643:ios:d3e25ad40a92c680</string>
+	<string>1:313950763281:ios:04d93373a5498f65</string>
 	<key>DATABASE_URL</key>
-	<string>https://seniorprojectwander1.firebaseio.com</string>
+	<string>https://senior-wander-app.firebaseio.com</string>
 </dict>
 </plist>

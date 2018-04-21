@@ -15,13 +15,13 @@ class CollectionViewCell: UICollectionViewCell {
     
     var mydestination: destination!{
         didSet{
-            updateData()
+           updateData()
         }
     }
     
     func updateData(){
-        myLabel.text = mydestination.title
-        usernameLabel.text = mydestination.name
+        myLabel.text = mydestination.title as! String
+        usernameLabel.text = mydestination.name as! String
         imageView.image = mydestination.img
         imageView.layer.cornerRadius = 7
         
