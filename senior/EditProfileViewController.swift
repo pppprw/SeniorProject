@@ -10,8 +10,6 @@ import UIKit
 
 class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
 
-    // Test jaa
-    //plsplsplsplspls
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var newUsername: UITextField!
     @IBOutlet weak var submit: UIButton!
